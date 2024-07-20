@@ -3,12 +3,11 @@ from pydantic import Field
 # models
 from models.base_model_config import get_base_model_config
 from models.resources.base_resource import YoutubeBaseResource
-from models.part.id import Id
-from models.part.playlist_snippet import PlaylistSnippet
-from models.part.base_status import BaseStatus
-from models.part.playlist_content_details import PlaylistContentDetails
-from models.part.base_player import BasePlayer
-from models.part.localization import Localization
+from models.part.snippet import PlaylistSnippet
+from models.part.status import BaseStatus
+from models.part.content_details import PlaylistContentDetails
+from models.part.player import BasePlayer
+from models.subpart.localization import Localization
 
 
 class YoutubePlaylistResource(YoutubeBaseResource):

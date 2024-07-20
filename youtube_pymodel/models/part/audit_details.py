@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from models.base_model_config import get_base_model_config
 
 
-class AuditDetails(BaseModel):
+class BaseAuditDetails(BaseModel):
     model_config = get_base_model_config()
 
     overall_good_standing: bool | None = Field(default=None)

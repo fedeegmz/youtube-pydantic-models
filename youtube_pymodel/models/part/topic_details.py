@@ -9,3 +9,9 @@ class BaseTopicDetails(BaseModel):
 
     topic_ids: list[str | None] = Field(default=[])
     topic_categories: list[str | None] = Field(default=[])
+
+
+class VideoTopicDetails(BaseTopicDetails):
+    model_config = get_base_model_config()
+
+    relevant_topic_ids: list[str | None] = Field(default=[])

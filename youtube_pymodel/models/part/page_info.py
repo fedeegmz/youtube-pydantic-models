@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from models.base_model_config import get_base_model_config
 
 
-class PageInfoPart(BaseModel):
+class BasePageInfo(BaseModel):
     model_config = get_base_model_config()
     
     total_results: int | None = Field(default=None)

@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from models.base_model_config import get_base_model_config
 
 
-class Id(BaseModel):
+class SearchId(BaseModel):
     model_config = get_base_model_config()
 
     kind: str | None = Field(default=None)

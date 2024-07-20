@@ -2,10 +2,10 @@
 from pydantic import BaseModel, Field
 # models
 from models.base_model_config import get_base_model_config
-from models.part.tag_suggestion import TagSuggestions
+from models.subpart.tag_suggestion import TagSuggestions
 
 
-class Suggestions(BaseModel):
+class BaseSuggestions(BaseModel):
     model_config = get_base_model_config()
 
     processing_errors: list[str | None] = Field(default=[])

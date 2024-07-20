@@ -3,19 +3,18 @@ from pydantic import Field
 # models
 from models.base_model_config import get_base_model_config
 from models.resources.base_resource import YoutubeBaseResource
-from models.part.id import Id
-from models.part.video_snippet import VideoSnippet
-from models.part.video_status import VideoStatus
-from models.part.video_statistics import VideoStatistics
-from models.part.video_content_details import VideoContentDetails
-from models.part.video_player import VideoPlayer
-from models.part.video_topic_details import VideoTopicDetails
-from models.part.recording_details import RecordingDetails
-from models.part.file_details import FileDetails
-from models.part.processing_details import ProcessingDetails
-from models.part.suggestions import Suggestions
-from models.part.live_streaming_details import LiveStreamingDetails
-from models.part.localization import Localization
+from models.part.snippet import VideoSnippet
+from models.part.content_details import VideoContentDetails
+from models.part.status import VideoStatus
+from models.part.statistics import VideoStatistics
+from models.part.player import VideoPlayer
+from models.part.topic_details import VideoTopicDetails
+from models.part.recording_details import BaseRecordingDetails
+from models.part.file_details import BaseFileDetails
+from models.part.processing_details import BaseProcessingDetails
+from models.part.suggestions import BaseSuggestions
+from models.part.live_streaming_details import BaseLiveStreamingDetails
+from models.subpart.localization import Localization
 
 
 class YoutubeVideoResource(YoutubeBaseResource):
@@ -28,9 +27,9 @@ class YoutubeVideoResource(YoutubeBaseResource):
     statistics: VideoStatistics | None = Field(default=None)
     player: VideoPlayer | None = Field(default=None)
     topic_details: VideoTopicDetails | None = Field(default=None)
-    recording_details: RecordingDetails | None = Field(default=None)
-    file_details : FileDetails | None = Field(default=None)
-    processing_details: ProcessingDetails | None = Field(default=None)
-    suggestions: Suggestions | None = Field(default=None)
-    live_streaming_details: LiveStreamingDetails | None = Field(default=None)
+    recording_details: BaseRecordingDetails | None = Field(default=None)
+    file_details : BaseFileDetails | None = Field(default=None)
+    processing_details: BaseProcessingDetails | None = Field(default=None)
+    suggestions: BaseSuggestions | None = Field(default=None)
+    live_streaming_details: BaseLiveStreamingDetails | None = Field(default=None)
     localizations: {str, Localization} | None = Field(default=None)

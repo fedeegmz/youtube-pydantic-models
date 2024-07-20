@@ -2,8 +2,21 @@
 from pydantic import BaseModel, Field
 # models
 from models.base_model_config import get_base_model_config
+from models.part.related_playlists import RelatedPlaylists
 from models.part.region_restriction import RegionRestriction
 from models.part.content_rating import ContentRating
+
+
+class ChannelContentDetails(BaseModel):
+    model_config = get_base_model_config()
+
+    related_playlists: RelatedPlaylists | None = Field(default=None)
+
+
+class PlaylistContentDetails(BaseModel):
+    model_config = get_base_model_config()
+
+    item_count: int | None = Field(default=None)
 
 
 class VideoContentDetails(BaseModel):

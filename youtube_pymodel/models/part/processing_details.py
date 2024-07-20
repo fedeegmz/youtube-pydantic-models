@@ -2,10 +2,10 @@
 from pydantic import BaseModel, Field
 # models
 from models.base_model_config import get_base_model_config
-from models.part.processing_progress import ProcessingProgress
+from models.subpart.processing_progress import ProcessingProgress
 
 
-class ProcessingDetails(BaseModel):
+class BaseProcessingDetails(BaseModel):
     model_config = get_base_model_config()
 
     processing_status: str | None = Field(default=None)

@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 from models.base_model_config import get_base_model_config
 
 
-class ContentOwnerDetails(BaseModel):
+class BaseContentOwnerDetails(BaseModel):
     model_config = get_base_model_config()
 
     content_owner: str | None = Field(default=None)

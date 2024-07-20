@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 from models.base_model_config import get_base_model_config
 
 
-class LiveStreamingDetails(BaseModel):
+class BaseLiveStreamingDetails(BaseModel):
     model_config = get_base_model_config()
 
     actual_start_time: datetime | str | None = Field(default=None)

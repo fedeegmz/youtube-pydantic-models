@@ -2,11 +2,13 @@
 from pydantic import BaseModel, Field
 # models
 from models.base_model_config import get_base_model_config
-from models.part.video_stream import VideoStream
-from models.part.audio_stream import AudioStream
+from models.subpart.audio_video_stream import (
+    AudioStream,
+    VideoStream
+)
 
 
-class FileDetails(BaseModel):
+class BaseFileDetails(BaseModel):
     model_config = get_base_model_config()
 
     file_name: str | None = Field(default=None)
