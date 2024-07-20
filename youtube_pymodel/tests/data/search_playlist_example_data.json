@@ -1,0 +1,46 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "7uNfaVfJWvv_ccYdpPASHyPkfTg",
+    "nextPageToken": "CAEQAA",
+    "regionCode": "AR",
+    "pageInfo": {
+        "totalResults": 122,
+        "resultsPerPage": 1
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "-KUbfM4WEuWxIOBNnACaWbFR6vI",
+            "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLOU2XLYxmsIJxPi__PZgYxTa3UFbfClKF"
+            },
+            "snippet": {
+                "publishedAt": "2024-04-29T18:29:54Z",
+                "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                "title": "Mobile at Google I/O 2024",
+                "description": "Create content that caters to diverse audiences and adapts to large and small screen devices. This curated playlist is designed for ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/XEzRZ35urlk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/XEzRZ35urlk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/XEzRZ35urlk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Google for Developers",
+                "liveBroadcastContent": "none",
+                "publishTime": "2024-04-29T18:29:54Z"
+            }
+        }
+    ]
+}

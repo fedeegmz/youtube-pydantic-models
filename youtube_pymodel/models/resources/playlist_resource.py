@@ -18,4 +18,4 @@ class YoutubePlaylistResource(YoutubeBaseResource):
     status: BaseStatus | None = Field(default=None)
     content_details: PlaylistContentDetails | None = Field(default=None)
     player: BasePlayer | None = Field(default=None)
-    localizations: {str, Localization} | None = Field(default=None)
+    localizations: dict[str, Localization] | None = Field(default=None)

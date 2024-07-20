@@ -32,4 +32,4 @@ class YoutubeVideoResource(YoutubeBaseResource):
     processing_details: BaseProcessingDetails | None = Field(default=None)
     suggestions: BaseSuggestions | None = Field(default=None)
     live_streaming_details: BaseLiveStreamingDetails | None = Field(default=None)
-    localizations: {str, Localization} | None = Field(default=None)
+    localizations: dict[str, Localization] | None = Field(default=None)

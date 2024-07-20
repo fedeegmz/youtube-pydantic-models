@@ -26,4 +26,4 @@ class YoutubeChannelResource(YoutubeBaseResource):
     branding_settings: BaseBrandingSettings | None = Field(default=None)
     audit_details: BaseAuditDetails | None = Field(default=None)
     content_owner_details: BaseContentOwnerDetails | None = Field(default=None)
-    localizations: {str, Localization} | None = Field(default=None)
+    localizations: dict[str, Localization] | None = Field(default=None)

@@ -1,0 +1,39 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "1J6NqoQuy9IMl5uS8vDyAU1i4OI",
+    "regionCode": "AR",
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 1
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "KafaS4l53Q8Pcl5pmiwUFTqevmA",
+            "id": {
+                "kind": "youtube#channel",
+                "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw"
+            },
+            "snippet": {
+                "publishedAt": "2007-08-23T00:34:43Z",
+                "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                "title": "Google for Developers",
+                "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s88-c-k-c0xffffffff-no-rj-mo"
+                    },
+                    "medium": {
+                        "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s240-c-k-c0xffffffff-no-rj-mo"
+                    },
+                    "high": {
+                        "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s800-c-k-c0xffffffff-no-rj-mo"
+                    }
+                },
+                "channelTitle": "Google for Developers",
+                "liveBroadcastContent": "none",
+                "publishTime": "2007-08-23T00:34:43Z"
+            }
+        }
+    ]
+}

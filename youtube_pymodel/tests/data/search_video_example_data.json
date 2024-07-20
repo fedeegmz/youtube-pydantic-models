@@ -1,0 +1,46 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "wb4IvGBPtiH0asPcih1qrmDlv_w",
+    "nextPageToken": "CAEQAA",
+    "regionCode": "AR",
+    "pageInfo": {
+        "totalResults": 614179,
+        "resultsPerPage": 1
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "clMChJ4Aye0eLCdkPcpPpfxcLzg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "jxy41sh4dkI"
+            },
+            "snippet": {
+                "publishedAt": "2024-07-19T13:00:48Z",
+                "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                "title": "Trying to get a dev&#39;s address be like...",
+                "description": "When you ask a dev for their address and get an IP address instead... Subscribe to Google for Developers ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/jxy41sh4dkI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/jxy41sh4dkI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/jxy41sh4dkI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Google for Developers",
+                "liveBroadcastContent": "none",
+                "publishTime": "2024-07-19T13:00:48Z"
+            }
+        }
+    ]
+}

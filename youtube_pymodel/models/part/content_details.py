@@ -2,9 +2,9 @@
 from pydantic import BaseModel, Field
 # models
 from models.base_model_config import get_base_model_config
-from models.part.related_playlists import RelatedPlaylists
-from models.part.region_restriction import RegionRestriction
-from models.part.content_rating import ContentRating
+from models.subpart.related_playlists import RelatedPlaylists
+from models.subpart.region_restriction import RegionRestriction
+from models.subpart.content_rating import ContentRating
 
 
 class ChannelContentDetails(BaseModel):

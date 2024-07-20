@@ -4,8 +4,7 @@ from pydantic import BaseModel, Field
 from models.base_model_config import get_base_model_config
 
 
-class RegionRestriction(BaseModel):
+class Image(BaseModel):
     model_config = get_base_model_config()
 
-    allowed: list[str] | None = Field(default=None)
-    blocked: list[str] | None = Field(default=None)
+    banner_external_url: str | None = Field(default=None)

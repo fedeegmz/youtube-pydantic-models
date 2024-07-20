@@ -23,6 +23,7 @@ class SearchSnippet(BaseSnippet):
     channel_id: str | None = Field(default=None)
     channel_title: str | None = Field(default=None)
     live_broadcast_content: str | None = Field(default=None)
+    publish_time: datetime | str | None = Field(default=None)
 
 
 class ChannelSnippet(BaseSnippet):
@@ -46,7 +47,7 @@ class PlaylistSnippet(BaseSnippet):
 class VideoSnippet(PlaylistSnippet):
     model_config = get_base_model_config()
 
-    tags: [str | None] = Field(default=[])
+    tags: list[str] | None = Field(default=None)
     category_id: str | None = Field(default=None)
     live_broadcast_content: str | None = Field(default=None)
     default_audio_language: str | None = Field(default=None)

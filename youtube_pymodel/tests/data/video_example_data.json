@@ -1,0 +1,104 @@
+{
+    "kind": "youtube#videoListResponse",
+    "etag": "cvFk3IWV1EkiGjA8n_rNg8-vkOo",
+    "items": [
+        {
+            "kind": "youtube#video",
+            "etag": "qhmAd4UbiIYd2ylf_EbPWmjvRRU",
+            "id": "PJm8WNajZtw",
+            "snippet": {
+                "publishedAt": "2024-05-16T14:06:46Z",
+                "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                "title": "Web AI: On-device machine learning models and tools for your next project",
+                "description": "Google's web AI libraries and models just reached 1 billion downloads. Learn what's new with the state of web AI at Google and discover gen AI models you can run client-side in the browser, along with new tooling and APIs for your company's next web app. We'll cover key web ML updates from Chrome, TensorFlow.js, MediaPipe Web, Core ML, Visual Blocks, and beyond.\n\nSpeakers: Jason Mayes, Na Li\n\nResources: \nLearn more about Vertex AI → https://goo.gle/3Kwbvfi \n\nWatch more:\nCheck out all the AI videos at Google I/O 2024 → https://goo.gle/io24-ai-yt\nCheck out all the Web videos at Google I/O 2024 → https://goo.gle/io24-web-yt\n\nSubscribe to Google Developers → https://goo.gle/developers\n\n#GoogleIO  \n\nEvent: Google I/O 2024",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/PJm8WNajZtw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/PJm8WNajZtw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/PJm8WNajZtw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/PJm8WNajZtw/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/PJm8WNajZtw/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Google for Developers",
+                "tags": [
+                    "Google",
+                    "developers",
+                    "pr_pr: Google I/O;",
+                    "ct:Event - Technical Session;",
+                    "ct:Stack - AI;",
+                    "ct:Stack - Web;"
+                ],
+                "categoryId": "28",
+                "liveBroadcastContent": "none",
+                "defaultLanguage": "en",
+                "localized": {
+                    "title": "Web AI: On-device machine learning models and tools for your next project",
+                    "description": "Google's web AI libraries and models just reached 1 billion downloads. Learn what's new with the state of web AI at Google and discover gen AI models you can run client-side in the browser, along with new tooling and APIs for your company's next web app. We'll cover key web ML updates from Chrome, TensorFlow.js, MediaPipe Web, Core ML, Visual Blocks, and beyond.\n\nSpeakers: Jason Mayes, Na Li\n\nResources: \nLearn more about Vertex AI → https://goo.gle/3Kwbvfi \n\nWatch more:\nCheck out all the AI videos at Google I/O 2024 → https://goo.gle/io24-ai-yt\nCheck out all the Web videos at Google I/O 2024 → https://goo.gle/io24-web-yt\n\nSubscribe to Google Developers → https://goo.gle/developers\n\n#GoogleIO  \n\nEvent: Google I/O 2024"
+                },
+                "defaultAudioLanguage": "en"
+            },
+            "contentDetails": {
+                "duration": "PT33M30S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+            },
+            "status": {
+                "uploadStatus": "processed",
+                "privacyStatus": "public",
+                "license": "youtube",
+                "embeddable": true,
+                "publicStatsViewable": true,
+                "madeForKids": false
+            },
+            "statistics": {
+                "viewCount": "19299",
+                "likeCount": "399",
+                "favoriteCount": "0",
+                "commentCount": "19"
+            },
+            "player": {
+                "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/PJm8WNajZtw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen\u003e\u003c/iframe\u003e"
+            },
+            "topicDetails": {
+                "topicCategories": [
+                    "https://en.wikipedia.org/wiki/Knowledge",
+                    "https://en.wikipedia.org/wiki/Technology"
+                ]
+            },
+            "recordingDetails": {},
+            "localizations": {
+                "en": {
+                    "title": "Web AI: On-device machine learning models and tools for your next project",
+                    "description": "Google's web AI libraries and models just reached 1 billion downloads. Learn what's new with the state of web AI at Google and discover gen AI models you can run client-side in the browser, along with new tooling and APIs for your company's next web app. We'll cover key web ML updates from Chrome, TensorFlow.js, MediaPipe Web, Core ML, Visual Blocks, and beyond.\n\nSpeakers: Jason Mayes, Na Li\n\nResources: \nLearn more about Vertex AI → https://goo.gle/3Kwbvfi \n\nWatch more:\nCheck out all the AI videos at Google I/O 2024 → https://goo.gle/io24-ai-yt\nCheck out all the Web videos at Google I/O 2024 → https://goo.gle/io24-web-yt\n\nSubscribe to Google Developers → https://goo.gle/developers\n\n#GoogleIO  \n\nEvent: Google I/O 2024"
+                }
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 1
+    }
+}

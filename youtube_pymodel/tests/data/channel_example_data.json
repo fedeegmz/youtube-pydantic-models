@@ -1,0 +1,87 @@
+{
+    "kind": "youtube#channelListResponse",
+    "etag": "LzOsGaGTboIBfbD2UKsBctwym30",
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 5
+    },
+    "items": [
+        {
+            "kind": "youtube#channel",
+            "etag": "cnvQDjcYDhBb7v0JO8D-32d2FE0",
+            "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+            "snippet": {
+                "title": "Google for Developers",
+                "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile and web.\n\nExplore more at developers.google.com\n\n",
+                "customUrl": "@googledevelopers",
+                "publishedAt": "2007-08-23T00:34:43Z",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s88-c-k-c0x00ffffff-no-rj",
+                        "width": 88,
+                        "height": 88
+                    },
+                    "medium": {
+                        "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s240-c-k-c0x00ffffff-no-rj",
+                        "width": 240,
+                        "height": 240
+                    },
+                    "high": {
+                        "url": "https://yt3.ggpht.com/PrZwRLLSaiXr5t-GRUhUFch2Qlol1G_voyuo-jJ4y-mqcVza7o7j_24yGRiydUP7UsQiKwo7=s800-c-k-c0x00ffffff-no-rj",
+                        "width": 800,
+                        "height": 800
+                    }
+                },
+                "localized": {
+                    "title": "Google for Developers",
+                    "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile and web.\n\nExplore more at developers.google.com\n\n"
+                },
+                "country": "US"
+            },
+            "contentDetails": {
+                "relatedPlaylists": {
+                    "likes": "",
+                    "uploads": "UU_x5XG1OV2P6uZZ5FSM9Ttw"
+                }
+            },
+            "statistics": {
+                "viewCount": "307453467",
+                "subscriberCount": "2380000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "6231"
+            },
+            "topicDetails": {
+                "topicIds": [
+                    "/m/01k8wb",
+                    "/m/07c1v",
+                    "/m/019_rr"
+                ],
+                "topicCategories": [
+                    "https://en.wikipedia.org/wiki/Knowledge",
+                    "https://en.wikipedia.org/wiki/Technology",
+                    "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+                ]
+            },
+            "status": {
+                "privacyStatus": "public",
+                "isLinked": true,
+                "longUploadsStatus": "longUploadsUnspecified",
+                "madeForKids": false
+            },
+            "brandingSettings": {
+                "channel": {
+                    "title": "Google for Developers",
+                    "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile and web.\n\nExplore more at developers.google.com\n\n",
+                    "keywords": "\"google developers\" developers \"Google developers videos\" \"google developer tutorials\" \"developer tutorials\" \"developer news\" android firebase tensorflow chrome web flutter \"google developer experts\" \"google launchpad\" \"developer updates\" google \"google design\"",
+                    "trackingAnalyticsAccountId": "YT-9170156-1",
+                    "unsubscribedTrailer": "bC8fvcpocBU",
+                    "country": "US"
+                },
+                "image": {
+                    "bannerExternalUrl": "https://yt3.googleusercontent.com/6JmlKmCUTIYeptQmXggwZzQ8Fo3x0GGDhdyZ3S0LOZbZCrjfdtg92zqnz0QxTKFeBlE2_RuyOp8"
+                }
+            },
+            "contentOwnerDetails": {}
+        }
+    ]
+}

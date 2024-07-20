@@ -1,0 +1,63 @@
+{
+    "kind": "youtube#playlistListResponse",
+    "etag": "I7xMI8JfXXU4WADM1Wg0SU855AM",
+    "nextPageToken": "CAEQAA",
+    "pageInfo": {
+        "totalResults": 160,
+        "resultsPerPage": 1
+    },
+    "items": [
+        {
+            "kind": "youtube#playlist",
+            "etag": "tbCbd2VsvJzLVAe2rghTRSyGycE",
+            "id": "PLOU2XLYxmsIL-LSajwT6_VviFWrDChEJX",
+            "snippet": {
+                "publishedAt": "2024-05-29T20:54:45Z",
+                "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                "title": "Live Google Pay integrations on Android",
+                "description": "Dive into the world of Google Pay integrations on Android with this live stream series! This comprehensive series covers everything you need to know to seamlessly collect payments in your Android apps. Join Domi and Jose as they chat with industry experts, explore diverse payment platforms and guide you through hands-on tutorials.\n\nWhat You'll Learn:\n- Google Pay Integration: From basic setup to advanced features like dynamic buttons.\n- Multiple Payment Platforms: Explore the integrations of Stripe, PayPal Braintree, Adyen and more.\n- Real-World Insights: Hear from developers and experts about their experiences and best practices.\n- Live Q&A: Get your questions answered in real-time during the live interactive sessions.\n\nWhether you're a beginner or an experienced developer, this playlist will empower you to build secure and user-friendly payment experiences for your Android applications. Hit that subscribe button and never miss an episode!\n\nFollow @GooglePayDevs on X for more content like this.\n\n#googlepay #android #payments",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/hlnrL88Lyzc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/hlnrL88Lyzc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/hlnrL88Lyzc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/hlnrL88Lyzc/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/hlnrL88Lyzc/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Google for Developers",
+                "localized": {
+                    "title": "Live Google Pay integrations on Android",
+                    "description": "Dive into the world of Google Pay integrations on Android with this live stream series! This comprehensive series covers everything you need to know to seamlessly collect payments in your Android apps. Join Domi and Jose as they chat with industry experts, explore diverse payment platforms and guide you through hands-on tutorials.\n\nWhat You'll Learn:\n- Google Pay Integration: From basic setup to advanced features like dynamic buttons.\n- Multiple Payment Platforms: Explore the integrations of Stripe, PayPal Braintree, Adyen and more.\n- Real-World Insights: Hear from developers and experts about their experiences and best practices.\n- Live Q&A: Get your questions answered in real-time during the live interactive sessions.\n\nWhether you're a beginner or an experienced developer, this playlist will empower you to build secure and user-friendly payment experiences for your Android applications. Hit that subscribe button and never miss an episode!\n\nFollow @GooglePayDevs on X for more content like this.\n\n#googlepay #android #payments"
+                }
+            },
+            "status": {
+                "privacyStatus": "public"
+            },
+            "contentDetails": {
+                "itemCount": 6
+            },
+            "player": {
+                "embedHtml": "\u003ciframe width=\"640\" height=\"360\" src=\"http://www.youtube.com/embed/videoseries?list=PLOU2XLYxmsIL-LSajwT6_VviFWrDChEJX\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen\u003e\u003c/iframe\u003e"
+            }
+        }
+    ]
+}

@@ -11,6 +11,6 @@ class Channel(BaseModel):
     description: str | None = Field(default=None)
     keywords: str | None = Field(default=None)
     tracking_analytics_account_id: str | None = Field(default=None)
-    unsubscriber_trailer: str | None = Field(default=None)
-    default_language: str | None = Field(default=None)
+    unsubscribed_trailer: str | None = Field(default=None)
     country: str | None = Field(default=None)
+    default_language: str | None = Field(default=None)
