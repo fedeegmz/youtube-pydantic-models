@@ -1,6 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "youtube_pydantic_models"
+name = "youtube-pydantic-models"
 version = "0.0.1"
 dependencies = [
     "pydantic",
 ]
+requires-python = ">= 3.7"
+authors = [
+    {name = "Federico Gomez", email = "gomez00federico@gmail.com"}
+]
+description = "Work with Pydantic models when you are using YouTube API"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = [
+    "youtube", "youtube-api", "youtubev3", "youtube-v3",
+    "pydantic", "pydantic-model"
+]
+classifiers = [
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/fedeegmz/youtube_pydantic_models"
+Issues = "https://github.com/fedeegmz/youtube_pydantic_models/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["youtube_pydantic_models"]
+exclude = ["youtube_pydantic_models.tests"]
