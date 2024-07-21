@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "youtube-pydantic-models"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
     "pydantic",
 ]
@@ -35,4 +35,4 @@ include-package-data = true
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["youtube_pydantic_models"]
-exclude = ["youtube_pydantic_models.tests"]
+exclude = ["tests"]
