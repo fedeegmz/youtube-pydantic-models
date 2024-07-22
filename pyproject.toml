@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "youtube-pydantic-models"
-version = "0.0.4"
+version = "0.1.0"
 dependencies = [
     "pydantic",
     "google-api-python-client",
@@ -13,7 +13,7 @@ requires-python = ">= 3.7"
 authors = [
     {name = "Federico Gomez", email = "gomez00federico@gmail.com"}
 ]
-description = "Work with Pydantic models when you are using YouTube API"
+description = "Use Pydantic models to work with the YouTube API."
 readme = "README.md"
 license = {file = "LICENSE"}
 keywords = [
@@ -27,8 +27,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/fedeegmz/youtube_pydantic_models"
-Issues = "https://github.com/fedeegmz/youtube_pydantic_models/issues"
+Homepage = "https://github.com/fedeegmz/youtube-pydantic-models"
+Issues = "https://github.com/fedeegmz/youtube-pydantic-models/issues"
 
 [tool.setuptools]
 include-package-data = true
