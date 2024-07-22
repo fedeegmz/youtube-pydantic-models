@@ -3,7 +3,9 @@ from datetime import datetime
 # Pydantic
 from pydantic import BaseModel, Field
 # models
-from models.base_model_config import get_base_model_config
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
 
 
 class BaseRecordingDetails(BaseModel):

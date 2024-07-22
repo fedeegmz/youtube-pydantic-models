@@ -1,13 +1,27 @@
 # Pydantic
 from pydantic import Field
 # models
-from models.base_model_config import get_base_model_config
-from models.resources.base_resource import YoutubeBaseResource
-from models.part.snippet import PlaylistSnippet
-from models.part.status import BaseStatus
-from models.part.content_details import PlaylistContentDetails
-from models.part.player import BasePlayer
-from models.subpart.localization import Localization
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.resources.base_resource import (
+    YoutubeBaseResource
+)
+from youtube_pydantic_models.models.part.snippet import (
+    PlaylistSnippet
+)
+from youtube_pydantic_models.models.part.status import (
+    BaseStatus
+)
+from youtube_pydantic_models.models.part.content_details import (
+    PlaylistContentDetails
+)
+from youtube_pydantic_models.models.part.player import (
+    BasePlayer
+)
+from youtube_pydantic_models.models.subpart.localization import (
+    Localization
+)
 
 
 class YoutubePlaylistResource(YoutubeBaseResource):

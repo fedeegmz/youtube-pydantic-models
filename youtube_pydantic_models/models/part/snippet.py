@@ -3,9 +3,15 @@ from datetime import datetime
 # Pydantic
 from pydantic import BaseModel, Field
 # models
-from models.base_model_config import get_base_model_config
-from models.subpart.thumbnail import Thumbnail
-from models.subpart.localized import Localized
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.subpart.thumbnail import (
+    Thumbnail
+)
+from youtube_pydantic_models.models.subpart.localized import (
+    Localized
+)
 
 
 class BaseSnippet(BaseModel):

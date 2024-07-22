@@ -1,10 +1,18 @@
 # Pydantic
 from pydantic import BaseModel, Field
 # models
-from models.base_model_config import get_base_model_config
-from models.subpart.channel import Channel
-from models.subpart.image import Image
-from models.subpart.watch import Watch
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.subpart.channel import (
+    Channel
+)
+from youtube_pydantic_models.models.subpart.image import (
+    Image
+)
+from youtube_pydantic_models.models.subpart.watch import (
+    Watch
+)
 
 
 class BaseBrandingSettings(BaseModel):

@@ -1,8 +1,10 @@
 # Pydantic
 from pydantic import BaseModel, Field
 # models
-from models.base_model_config import get_base_model_config
-from models.subpart.audio_video_stream import (
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.subpart.audio_video_stream import (
     AudioStream,
     VideoStream
 )

@@ -1,10 +1,18 @@
 # Pydantic
 from pydantic import BaseModel, Field
 # models
-from models.base_model_config import get_base_model_config
-from models.subpart.related_playlists import RelatedPlaylists
-from models.subpart.region_restriction import RegionRestriction
-from models.subpart.content_rating import ContentRating
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.subpart.related_playlists import (
+    RelatedPlaylists
+)
+from youtube_pydantic_models.models.subpart.region_restriction import (
+    RegionRestriction
+)
+from youtube_pydantic_models.models.subpart.content_rating import (
+    ContentRating
+)
 
 
 class ChannelContentDetails(BaseModel):

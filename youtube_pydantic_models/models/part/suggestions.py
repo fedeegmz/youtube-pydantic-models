@@ -1,8 +1,12 @@
 # Pydantic
 from pydantic import BaseModel, Field
 # models
-from models.base_model_config import get_base_model_config
-from models.subpart.tag_suggestion import TagSuggestions
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.subpart.tag_suggestion import (
+    TagSuggestions
+)
 
 
 class BaseSuggestions(BaseModel):

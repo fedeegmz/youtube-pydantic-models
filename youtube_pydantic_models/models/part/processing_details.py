@@ -1,8 +1,12 @@
 # Pydantic
 from pydantic import BaseModel, Field
 # models
-from models.base_model_config import get_base_model_config
-from models.subpart.processing_progress import ProcessingProgress
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.subpart.processing_progress import (
+    ProcessingProgress
+)
 
 
 class BaseProcessingDetails(BaseModel):

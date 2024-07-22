@@ -1,17 +1,39 @@
 # Pydantic
 from pydantic import Field
 # models
-from models.base_model_config import get_base_model_config
-from models.resources.base_resource import YoutubeBaseResource
-from models.part.snippet import ChannelSnippet
-from models.part.content_details import ChannelContentDetails
-from models.part.statistics import ChannelStatistics
-from models.part.topic_details import BaseTopicDetails
-from models.part.status import ChannelStatus
-from models.part.branding_settings import BaseBrandingSettings
-from models.part.audit_details import BaseAuditDetails
-from models.part.content_owner_details import BaseContentOwnerDetails
-from models.subpart.localization import Localization
+from youtube_pydantic_models.models.base_model_config import (
+    get_base_model_config
+)
+from youtube_pydantic_models.models.resources.base_resource import (
+    YoutubeBaseResource
+)
+from youtube_pydantic_models.models.part.snippet import (
+    ChannelSnippet
+)
+from youtube_pydantic_models.models.part.content_details import (
+    ChannelContentDetails
+)
+from youtube_pydantic_models.models.part.statistics import (
+    ChannelStatistics
+)
+from youtube_pydantic_models.models.part.topic_details import (
+    BaseTopicDetails
+)
+from youtube_pydantic_models.models.part.status import (
+    ChannelStatus
+)
+from youtube_pydantic_models.models.part.branding_settings import (
+    BaseBrandingSettings
+)
+from youtube_pydantic_models.models.part.audit_details import (
+    BaseAuditDetails
+)
+from youtube_pydantic_models.models.part.content_owner_details import (
+    BaseContentOwnerDetails
+)
+from youtube_pydantic_models.models.subpart.localization import (
+    Localization
+)
 
 
 class YoutubeChannelResource(YoutubeBaseResource):
