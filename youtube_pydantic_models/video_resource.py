@@ -7,39 +7,17 @@ from youtube_pydantic_models.base_model_config import (
 from youtube_pydantic_models.base_resource import (
     YoutubeBaseResource
 )
-from youtube_pydantic_models.part.snippet import (
-    VideoSnippet
-)
-from youtube_pydantic_models.part.content_details import (
-    VideoContentDetails
-)
-from youtube_pydantic_models.part.status import (
-    VideoStatus
-)
-from youtube_pydantic_models.part.statistics import (
-    VideoStatistics
-)
-from youtube_pydantic_models.part.player import (
-    VideoPlayer
-)
-from youtube_pydantic_models.part.topic_details import (
-    VideoTopicDetails
-)
-from youtube_pydantic_models.part.recording_details import (
-    BaseRecordingDetails
-)
-from youtube_pydantic_models.part.file_details import (
-    BaseFileDetails
-)
-from youtube_pydantic_models.part.processing_details import (
-    BaseProcessingDetails
-)
-from youtube_pydantic_models.part.suggestions import (
-    BaseSuggestions
-)
-from youtube_pydantic_models.part.live_streaming_details import (
-    BaseLiveStreamingDetails
-)
+from youtube_pydantic_models.parts import VideoSnippet
+from youtube_pydantic_models.parts import VideoContentDetails
+from youtube_pydantic_models.parts import VideoStatus
+from youtube_pydantic_models.parts import VideoStatistics
+from youtube_pydantic_models.parts import VideoPlayer
+from youtube_pydantic_models.parts import VideoTopicDetails
+from youtube_pydantic_models.parts import BaseRecordingDetails
+from youtube_pydantic_models.parts import BaseFileDetails
+from youtube_pydantic_models.parts import BaseProcessingDetails
+from youtube_pydantic_models.parts import BaseSuggestions
+from youtube_pydantic_models.parts import BaseLiveStreamingDetails
 from youtube_pydantic_models._subparts.localization import (
     Localization
 )

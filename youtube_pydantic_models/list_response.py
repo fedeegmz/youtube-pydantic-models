@@ -4,9 +4,7 @@ from pydantic import BaseModel, Field
 from youtube_pydantic_models.base_model_config import (
     get_base_model_config
 )
-from youtube_pydantic_models.part.page_info import (
-    PageInfo
-)
+from youtube_pydantic_models.parts import BasePageInfo
 
 
 class YoutubeListResponse(BaseModel):
@@ -16,5 +14,5 @@ class YoutubeListResponse(BaseModel):
     etag: str | None = Field(default=None)
     next_page_token: str | None = Field(default=None)
     prev_page_token: str | None = Field(default=None)
-    page_info: PageInfo | None = Field(default=None)
-    items: list[any | None] = Field(default=[])
+    page_info: BasePageInfo | None = Field(default=None)
+    items: list | None = Field(default=[])

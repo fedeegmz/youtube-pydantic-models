@@ -1,3 +1,4 @@
+from .parts import *
 from .base_model_config import get_base_model_config
 from .base_resource import YoutubeBaseResource
 from .channel_resource import YoutubeChannelResource
