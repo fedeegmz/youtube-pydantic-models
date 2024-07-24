@@ -5,7 +5,7 @@ from youtube_pydantic_models.channel_resource import YoutubeChannelResource
 from youtube_pydantic_models.playlist_resource import YoutubePlaylistResource
 from youtube_pydantic_models.video_resource import YoutubeVideoResource
 from youtube_pydantic_models.search_resource import YoutubeSearchResource
-from youtube_pydantic_models.youtube_client import YoutubeClient
+# from youtube_pydantic_models.youtube_client import YoutubeClient
 
 # from youtube_pydantic_models._parts.audit_details import BaseAuditDetails
 # from youtube_pydantic_models._parts.branding_settings import BaseBrandingSettings
