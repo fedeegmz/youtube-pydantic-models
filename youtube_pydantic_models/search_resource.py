@@ -7,10 +7,10 @@ from youtube_pydantic_models.base_model_config import (
 from youtube_pydantic_models.base_resource import (
     YoutubeBaseResource
 )
-from youtube_pydantic_models._parts.id import (
+from youtube_pydantic_models.part.id import (
     SearchId
 )
-from youtube_pydantic_models._parts.snippet import (
+from youtube_pydantic_models.part.snippet import (
     SearchSnippet
 )
 

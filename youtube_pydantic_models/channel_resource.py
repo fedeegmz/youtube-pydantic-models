@@ -7,28 +7,28 @@ from youtube_pydantic_models.base_model_config import (
 from youtube_pydantic_models.base_resource import (
     YoutubeBaseResource
 )
-from youtube_pydantic_models._parts.snippet import (
+from youtube_pydantic_models.part.snippet import (
     ChannelSnippet
 )
-from youtube_pydantic_models._parts.content_details import (
+from youtube_pydantic_models.part.content_details import (
     ChannelContentDetails
 )
-from youtube_pydantic_models._parts.statistics import (
+from youtube_pydantic_models.part.statistics import (
     ChannelStatistics
 )
-from youtube_pydantic_models._parts.topic_details import (
+from youtube_pydantic_models.part.topic_details import (
     BaseTopicDetails
 )
-from youtube_pydantic_models._parts.status import (
+from youtube_pydantic_models.part.status import (
     ChannelStatus
 )
-from youtube_pydantic_models._parts.branding_settings import (
+from youtube_pydantic_models.part.branding_settings import (
     BaseBrandingSettings
 )
-from youtube_pydantic_models._parts.audit_details import (
+from youtube_pydantic_models.part.audit_details import (
     BaseAuditDetails
 )
-from youtube_pydantic_models._parts.content_owner_details import (
+from youtube_pydantic_models.part.content_owner_details import (
     BaseContentOwnerDetails
 )
 from youtube_pydantic_models._subparts.localization import (

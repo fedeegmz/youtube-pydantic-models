@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from youtube_pydantic_models.base_model_config import (
     get_base_model_config
 )
-from youtube_pydantic_models._parts.page_info import (
+from youtube_pydantic_models.part.page_info import (
     PageInfo
 )
 

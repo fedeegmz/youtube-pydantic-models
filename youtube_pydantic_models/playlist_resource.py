@@ -7,16 +7,16 @@ from youtube_pydantic_models.base_model_config import (
 from youtube_pydantic_models.base_resource import (
     YoutubeBaseResource
 )
-from youtube_pydantic_models._parts.snippet import (
+from youtube_pydantic_models.part.snippet import (
     PlaylistSnippet
 )
-from youtube_pydantic_models._parts.status import (
+from youtube_pydantic_models.part.status import (
     BaseStatus
 )
-from youtube_pydantic_models._parts.content_details import (
+from youtube_pydantic_models.part.content_details import (
     PlaylistContentDetails
 )
-from youtube_pydantic_models._parts.player import (
+from youtube_pydantic_models.part.player import (
     BasePlayer
 )
 from youtube_pydantic_models._subparts.localization import (
