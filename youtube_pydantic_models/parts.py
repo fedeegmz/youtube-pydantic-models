@@ -3,39 +3,19 @@ from pydantic import BaseModel, Field
 from youtube_pydantic_models.base_model_config import (
     get_base_model_config
 )
-from youtube_pydantic_models._subparts.channel import (
-    Channel
-)
-from youtube_pydantic_models._subparts.image import (
-    Image
-)
-from youtube_pydantic_models._subparts.watch import (
-    Watch
-)
-from youtube_pydantic_models._subparts.related_playlists import (
-    RelatedPlaylists
-)
-from youtube_pydantic_models._subparts.region_restriction import (
-    RegionRestriction
-)
-from youtube_pydantic_models._subparts.content_rating import (
-    ContentRating
-)
-from youtube_pydantic_models._subparts.audio_video_stream import (
+from youtube_pydantic_models.subparts import (
     AudioStream,
-    VideoStream
-)
-from youtube_pydantic_models._subparts.processing_progress import (
-    ProcessingProgress
-)
-from youtube_pydantic_models._subparts.thumbnail import (
-    Thumbnail
-)
-from youtube_pydantic_models._subparts.localized import (
-    Localized
-)
-from youtube_pydantic_models._subparts.tag_suggestion import (
-    TagSuggestions
+    Channel,
+    ContentRating,
+    Image,
+    Localized,
+    ProcessingProgress,
+    RegionRestriction,
+    RelatedPlaylists,
+    TagSuggestions,
+    Thumbnail,
+    VideoStream,
+    Watch
 )
 
 

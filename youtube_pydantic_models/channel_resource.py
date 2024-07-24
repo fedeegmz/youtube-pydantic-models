@@ -13,9 +13,7 @@ from youtube_pydantic_models.parts import ChannelStatus
 from youtube_pydantic_models.parts import BaseBrandingSettings
 from youtube_pydantic_models.parts import BaseAuditDetails
 from youtube_pydantic_models.parts import BaseContentOwnerDetails
-from youtube_pydantic_models._subparts.localization import (
-    Localization
-)
+from youtube_pydantic_models.subparts import Localization
 
 
 class YoutubeChannelResource(YoutubeBaseResource):

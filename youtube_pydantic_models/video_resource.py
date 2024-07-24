@@ -1,6 +1,4 @@
-# Pydantic
 from pydantic import Field
-# models
 from youtube_pydantic_models.base_model_config import (
     get_base_model_config
 )
@@ -18,9 +16,7 @@ from youtube_pydantic_models.parts import BaseFileDetails
 from youtube_pydantic_models.parts import BaseProcessingDetails
 from youtube_pydantic_models.parts import BaseSuggestions
 from youtube_pydantic_models.parts import BaseLiveStreamingDetails
-from youtube_pydantic_models._subparts.localization import (
-    Localization
-)
+from youtube_pydantic_models.subparts import Localization
 
 
 class YoutubeVideoResource(YoutubeBaseResource):
