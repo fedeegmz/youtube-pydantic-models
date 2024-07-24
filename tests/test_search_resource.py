@@ -1,4 +1,6 @@
-from models.resources.search_resource import YoutubeSearchResource
+from youtube_pydantic_models.search_resource import (
+    YoutubeSearchResource
+)
 from tests.test_youtube_resource import TestYoutubeResource
 
 

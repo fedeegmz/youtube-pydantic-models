@@ -1,4 +1,6 @@
-from models.resources.playlist_resource import YoutubePlaylistResource
+from youtube_pydantic_models.playlist_resource import (
+    YoutubePlaylistResource
+)
 from tests.test_youtube_resource import TestYoutubeResource
 
 

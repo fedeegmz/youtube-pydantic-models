@@ -1,4 +1,6 @@
-from models.resources.channel_resource import YoutubeChannelResource
+from youtube_pydantic_models.channel_resource import (
+    YoutubeChannelResource
+)
 from tests.test_youtube_resource import TestYoutubeResource
 
 

@@ -35,7 +35,7 @@ class TestYoutubeResource(unittest.TestCase):
     
     def get_json_data(self, file_name: str) -> dict | None:
         with open(
-            f"youtube_pymodel/tests/data/{file_name}",
+            f"tests/data/{file_name}",
             "r"
         ) as data:
             return json.loads(data.read())
