@@ -1,3 +1,5 @@
+import youtube_pydantic_models._parts
+import youtube_pydantic_models._subparts
 from youtube_pydantic_models.base_model_config import get_base_model_config
 from youtube_pydantic_models.base_resource import YoutubeBaseResource
 from youtube_pydantic_models.channel_resource import YoutubeChannelResource

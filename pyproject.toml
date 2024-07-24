@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "youtube-pydantic-models"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
     "pydantic",
     "google-api-python-client",
