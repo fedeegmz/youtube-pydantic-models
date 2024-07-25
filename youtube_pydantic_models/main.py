@@ -27,7 +27,12 @@ class YoutubeClient:
         id: str,
         part: str
     ) -> YoutubeChannelResource | None:
-        available_part = "snippet, contentDetails, statistics, topicDetails, status, brandingSettings, contentOwnerDetails"
+        """ Search a YouTube channel by id and return a YoutubeChannelResource or None.
+        Arguments:
+        id [str] -- channel id to search
+        part [str] -- resource's parts separated by comma (,). 
+        Available parts: snippet, contentDetails, statistics, topicDetails, status, brandingSettings, contentOwnerDetails
+        """
         params = {
             'id': id,
             'part': part
@@ -37,15 +42,24 @@ class YoutubeClient:
             endpoint = "channels",
             params = params
         )
-        if response:
-            return YoutubeChannelResource(**response)
+        if not response:
+            return None
+        elif response['pageInfo']['totalResults'] > 0:
+            data = response['items'][0]
+            return YoutubeChannelResource(**data)
+        return None
 
     def get_playlist(
         self,
         id: str,
         part: str
     ) -> YoutubePlaylistResource | None:
-        available_part = "snippet, contentDetails, player, status, id, localizations"
+        """ Search a YouTube playlist by id and return a YoutubePlaylistResource or None.
+        Arguments:
+        id [str] -- channel id to search
+        part [str] -- resource's parts separated by comma (,). 
+        Available parts: snippet, contentDetails, player, status, localizations
+        """
         params = {
             'id': id,
             'part': part
@@ -55,15 +69,24 @@ class YoutubeClient:
             endpoint = "playlists",
             params = params
         )
-        if response:
-            return YoutubePlaylistResource(**response)
+        if not response:
+            return None
+        elif response['pageInfo']['totalResults'] > 0:
+            data = response['items'][0]
+            return YoutubePlaylistResource(**data)
+        return None
 
     def get_video(
         self,
         id: str,
         part: str
     ) -> YoutubeVideoResource | None:
-        available_part = "snippet, contentDetails, statistics, topicDetails, status, player, recordingDetails, localizations, liveStreamingDetails"
+        """ Search a YouTube video by id and return a YoutubeVideoResource or None.
+        Arguments:
+        id [str] -- channel id to search
+        part [str] -- resource's parts separated by comma (,). 
+        Available parts: snippet, contentDetails, statistics, topicDetails, status, player, recordingDetails, localizations, liveStreamingDetails
+        """
         params = {
             'id': id,
             'part': part
@@ -73,8 +96,12 @@ class YoutubeClient:
             endpoint = "videos",
             params = params
         )
-        if response:
-            return YoutubeVideoResource(**response)
+        if not response:
+            return None
+        elif response['pageInfo']['totalResults'] > 0:
+            data = response['items'][0]
+            return YoutubeVideoResource(**data)
+        return None
 
     def search(
         self,
@@ -82,9 +109,14 @@ class YoutubeClient:
         part: str,
         type: str
     ) -> YoutubeSearchResource | None:
-        available_part = "id, snippet"
+        """ Search a YouTube channel by id and return a YoutubeSearchResource or None.
+        Arguments:
+        id [str] -- channel id to search
+        part [str] -- resource's parts separated by comma (,). Available parts: snippet.
+        type [str] -- type of resource. Available types: channel, playlist, video
+        """
         params = {
-            'id': channel_id,
+            'channelId': channel_id,
             'part': part,
             'type': type
         }
@@ -93,8 +125,12 @@ class YoutubeClient:
             endpoint = "search",
             params = params
         )
-        if response:
-            return YoutubeSearchResource(**response)
+        if not response:
+            return None
+        elif response['pageInfo']['totalResults'] > 0:
+            data = response['items'][0]
+            return YoutubeSearchResource(**data)
+        return None
     
     def _get_request(self, endpoint: str, params: dict) -> dict | list:
         response = requests.get(
