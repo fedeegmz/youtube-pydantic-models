@@ -1,10 +1,14 @@
 import requests
+from youtube_pydantic_models.channel_resource import YoutubeChannelResource
+from youtube_pydantic_models.playlist_resource import YoutubePlaylistResource
+from youtube_pydantic_models.video_resource import YoutubeVideoResource
+from youtube_pydantic_models.search_resource import YoutubeSearchResource
 
 
 class YoutubeClient:
     def __init__(self, api_key: str) -> None:
         if not api_key:
-            raise Exception("API_KEY param is required")
+            raise Exception("api_key param is required")
         
         self._api_key: str = api_key
         self._api_version: str = "v3"
@@ -22,7 +26,7 @@ class YoutubeClient:
         self,
         id: str,
         part: str
-    ) -> dict:
+    ) -> YoutubeChannelResource | None:
         available_part = "snippet, contentDetails, statistics, topicDetails, status, brandingSettings, contentOwnerDetails"
         params = {
             'id': id,
@@ -33,13 +37,14 @@ class YoutubeClient:
             endpoint = "channels",
             params = params
         )
-        return response
+        if response:
+            return YoutubeChannelResource(**response)
 
     def get_playlist(
         self,
         id: str,
         part: str
-    ) -> dict:
+    ) -> YoutubePlaylistResource | None:
         available_part = "snippet, contentDetails, player, status, id, localizations"
         params = {
             'id': id,
@@ -50,13 +55,14 @@ class YoutubeClient:
             endpoint = "playlists",
             params = params
         )
-        return response
+        if response:
+            return YoutubePlaylistResource(**response)
 
     def get_video(
         self,
         id: str,
         part: str
-    ) -> dict:
+    ) -> YoutubeVideoResource | None:
         available_part = "snippet, contentDetails, statistics, topicDetails, status, player, recordingDetails, localizations, liveStreamingDetails"
         params = {
             'id': id,
@@ -67,14 +73,15 @@ class YoutubeClient:
             endpoint = "videos",
             params = params
         )
-        return response
+        if response:
+            return YoutubeVideoResource(**response)
 
     def search(
         self,
         channel_id: str,
         part: str,
         type: str
-    ) -> dict:
+    ) -> YoutubeSearchResource | None:
         available_part = "id, snippet"
         params = {
             'id': channel_id,
@@ -86,13 +93,10 @@ class YoutubeClient:
             endpoint = "search",
             params = params
         )
-        return response
+        if response:
+            return YoutubeSearchResource(**response)
     
-    def _get_request(
-        self,
-        endpoint: str,
-        params: dict
-    ) -> dict | list:
+    def _get_request(self, endpoint: str, params: dict) -> dict | list:
         response = requests.get(
             self._api_path + endpoint,
             params=self._set_key_param(params)
