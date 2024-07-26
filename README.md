@@ -1,14 +1,15 @@
 # youtube-pydantic-models
 
 A **Python** library that contains the most popular YouTube models based on Pydantic. If you are working with the **YouTube API**, **youtube-pydantic-models** can help you validate, manipulate, and retrieve data.  
-The YouTube API returns data using camel case, but you can choose to return data using camel case or snake case. With the parameter ```by_alias=True```, data is returned using camel case.
-When using the model, every parameter is accessed using snake case.
+Use the YoutubeClient class to get data about channels, playlists, videos and more.  
+The YouTube API returns data using camel case, but you can choose to return data using camel case or snake case. With the parameter ```by_alias=True```, data is returned using camel case. When using the model, every parameter is accessed using snake case.
 
 - Author: [**fedeegmz**](https://github.com/fedeegmz)
 - Source: [**GitHub**](https://github.com/fedeegmz/youtube_pydantic_models)
 
 ## Features
 
+- Make requests to YouTube API using the client
 - Validate YouTube API responses using Pydantic models
 - Convert data between camel case and snake case
 - Easy-to-use interface for common YouTube resources
@@ -27,6 +28,21 @@ pip install youtube-pydantic-models
 ```
 
 ## Example usage
+
+### YoutubeClient
+
+```python
+from youtube_pydantic_models import YoutubeClient
+
+client = YoutubeClient("MY_API_KEY")
+channel = client.get_channel(
+    id="UC_x5XG1OV2P6uZZ5FSM9Ttw",
+    part="snippet, statistics"
+)
+
+if channel:
+    print(channel.id) # -> UC_x5XG1OV2P6uZZ5FSM9Ttw
+```
 
 ### Channel Model
 
