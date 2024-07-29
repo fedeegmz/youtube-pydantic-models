@@ -1,22 +1,19 @@
 site_name: Youtube Pydantic Models
-# site_url: https://youtube-pydantic-models.fedeegmz.tech/
 site_description: Use Pydantic models to work with the YouTube API.
 site_author: fedeegmz
 
-repo_name: youtube-pydantic-models
+repo_name: fedeegmz/youtube-pydantic-models
 repo_url: https://github.com/fedeegmz/youtube-pydantic-models
 
 theme:
   name: dracula
-  color_mode: dark
-  nav_style: dark
   locale: en
 
 nav:
   - Home: index.md
   - Youtube Client: youtube_client.md
-  # - Models:
-  #   - Channel: models/channel.md
-  #   - Playlist: models/playlist.md
-  #   - Video: models/video.md
-  #   - Search: models/search.md
+  - Models:
+    - Channel: models/channel.md
+    - Playlist: models/playlist.md
+    - Video: models/video.md
+    - Search: models/search.md

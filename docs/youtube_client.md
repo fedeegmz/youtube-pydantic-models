@@ -9,13 +9,15 @@ from youtube_pydantic_models import YoutubeClient
 client = YoutubeClient("YOUR_API_KEY")
 
 channel = client.get_channel("example_id", "snippet, statistics")
+print(channel.snippet.title)
+print(client.get_current_quota())
 ```
 
 ## Init args
 
 - **api_key** (str): secret YouTube API key.
 - **qouta_per_day** (int): limit per day of YouTube quota. By default is 10000.
-- **quotas_table** (Enum): table of quota's cost.
+- **quotas_table** (Enum): table of quota's cost. By default is [Quotas class](https://github.com/fedeegmz/youtube-pydantic-models/blob/main/youtube_pydantic_models/quotas.py)
 
 ## Methods
 
