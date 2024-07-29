@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Video - Youtube Pydantic Models</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="fedeegmz">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">Youtube Pydantic Models</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../youtube_client/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Youtube Client
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#models-collapse" aria-expanded="false">
+                    Models
+                </a>
+                <div class="collapse" id="models-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../channel/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Channel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../playlist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Playlist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../search/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Search
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../playlist/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../search/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/fedeegmz/youtube-pydantic-models"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            fedeegmz/youtube-pydantic-models
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/fedeegmz/youtube-pydantic-models?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/fedeegmz/youtube-pydantic-models?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/fedeegmz/youtube-pydantic-models?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="youtube-video-resource">Youtube Video Resource</h1>
+<pre><code class="language-python">from youtube_pydantic_models import YoutubeVideoResource
+</code></pre>
+<p>Represents a <a href="https://developers.google.com/youtube/v3/docs/videos">-&gt; YouTube video</a>.</p>
+<pre><code class="language-json">{
+    &quot;kind&quot;: &quot;youtube#video&quot;,
+    &quot;etag&quot;: etag,
+    &quot;id&quot;: string,
+    &quot;snippet&quot;: {
+        &quot;publishedAt&quot;: datetime,
+        &quot;channelId&quot;: string,
+        &quot;title&quot;: string,
+        &quot;description&quot;: string,
+        &quot;thumbnails&quot;: {
+            (key): {
+                &quot;url&quot;: string,
+                &quot;width&quot;: unsigned integer,
+                &quot;height&quot;: unsigned integer
+            }
+        },
+        &quot;channelTitle&quot;: string,
+        &quot;tags&quot;: [
+            string
+        ],
+        &quot;categoryId&quot;: string,
+        &quot;liveBroadcastContent&quot;: string,
+        &quot;defaultLanguage&quot;: string,
+        &quot;localized&quot;: {
+            &quot;title&quot;: string,
+            &quot;description&quot;: string
+        },
+        &quot;defaultAudioLanguage&quot;: string
+    },
+    &quot;contentDetails&quot;: {
+        &quot;duration&quot;: string,
+        &quot;dimension&quot;: string,
+        &quot;definition&quot;: string,
+        &quot;caption&quot;: string,
+        &quot;licensedContent&quot;: boolean,
+        &quot;regionRestriction&quot;: {
+            &quot;allowed&quot;: [
+                string
+            ],
+            &quot;blocked&quot;: [
+                string
+            ]
+        },
+        &quot;contentRating&quot;: {
+            &quot;acbRating&quot;: string,
+            &quot;agcomRating&quot;: string,
+            &quot;anatelRating&quot;: string,
+            &quot;bbfcRating&quot;: string,
+            &quot;bfvcRating&quot;: string,
+            &quot;bmukkRating&quot;: string,
+            &quot;catvRating&quot;: string,
+            &quot;catvfrRating&quot;: string,
+            &quot;cbfcRating&quot;: string,
+            &quot;cccRating&quot;: string,
+            &quot;cceRating&quot;: string,
+            &quot;chfilmRating&quot;: string,
+            &quot;chvrsRating&quot;: string,
+            &quot;cicfRating&quot;: string,
+            &quot;cnaRating&quot;: string,
+            &quot;cncRating&quot;: string,
+            &quot;csaRating&quot;: string,
+            &quot;cscfRating&quot;: string,
+            &quot;czfilmRating&quot;: string,
+            &quot;djctqRating&quot;: string,
+            &quot;djctqRatingReasons&quot;: [,
+                string
+            ],
+            &quot;ecbmctRating&quot;: string,
+            &quot;eefilmRating&quot;: string,
+            &quot;egfilmRating&quot;: string,
+            &quot;eirinRating&quot;: string,
+            &quot;fcbmRating&quot;: string,
+            &quot;fcoRating&quot;: string,
+            &quot;fmocRating&quot;: string,
+            &quot;fpbRating&quot;: string,
+            &quot;fpbRatingReasons&quot;: [,
+                string
+            ],
+            &quot;fskRating&quot;: string,
+            &quot;grfilmRating&quot;: string,
+            &quot;icaaRating&quot;: string,
+            &quot;ifcoRating&quot;: string,
+            &quot;ilfilmRating&quot;: string,
+            &quot;incaaRating&quot;: string,
+            &quot;kfcbRating&quot;: string,
+            &quot;kijkwijzerRating&quot;: string,
+            &quot;kmrbRating&quot;: string,
+            &quot;lsfRating&quot;: string,
+            &quot;mccaaRating&quot;: string,
+            &quot;mccypRating&quot;: string,
+            &quot;mcstRating&quot;: string,
+            &quot;mdaRating&quot;: string,
+            &quot;medietilsynetRating&quot;: string,
+            &quot;mekuRating&quot;: string,
+            &quot;mibacRating&quot;: string,
+            &quot;mocRating&quot;: string,
+            &quot;moctwRating&quot;: string,
+            &quot;mpaaRating&quot;: string,
+            &quot;mpaatRating&quot;: string,
+            &quot;mtrcbRating&quot;: string,
+            &quot;nbcRating&quot;: string,
+            &quot;nbcplRating&quot;: string,
+            &quot;nfrcRating&quot;: string,
+            &quot;nfvcbRating&quot;: string,
+            &quot;nkclvRating&quot;: string,
+            &quot;oflcRating&quot;: string,
+            &quot;pefilmRating&quot;: string,
+            &quot;rcnofRating&quot;: string,
+            &quot;resorteviolenciaRating&quot;: string,
+            &quot;rtcRating&quot;: string,
+            &quot;rteRating&quot;: string,
+            &quot;russiaRating&quot;: string,
+            &quot;skfilmRating&quot;: string,
+            &quot;smaisRating&quot;: string,
+            &quot;smsaRating&quot;: string,
+            &quot;tvpgRating&quot;: string,
+            &quot;ytRating&quot;: string
+        },
+        &quot;projection&quot;: string,
+        &quot;hasCustomThumbnail&quot;: boolean
+    },
+    &quot;status&quot;: {
+        &quot;uploadStatus&quot;: string,
+        &quot;failureReason&quot;: string,
+        &quot;rejectionReason&quot;: string,
+        &quot;privacyStatus&quot;: string,
+        &quot;publishAt&quot;: datetime,
+        &quot;license&quot;: string,
+        &quot;embeddable&quot;: boolean,
+        &quot;publicStatsViewable&quot;: boolean,
+        &quot;madeForKids&quot;: boolean,
+        &quot;selfDeclaredMadeForKids&quot;: boolean
+    },
+    &quot;statistics&quot;: {
+        &quot;viewCount&quot;: string,
+        &quot;likeCount&quot;: string,
+        &quot;dislikeCount&quot;: string,
+        &quot;favoriteCount&quot;: string,
+        &quot;commentCount&quot;: string
+    },
+    &quot;player&quot;: {
+        &quot;embedHtml&quot;: string,
+        &quot;embedHeight&quot;: long,
+        &quot;embedWidth&quot;: long
+    },
+    &quot;topicDetails&quot;: {
+        &quot;topicIds&quot;: [
+            string
+        ],
+        &quot;relevantTopicIds&quot;: [
+            string
+        ],
+        &quot;topicCategories&quot;: [
+            string
+        ]
+    },
+    &quot;recordingDetails&quot;: {
+        &quot;recordingDate&quot;: datetime
+    },
+    &quot;fileDetails&quot;: {
+        &quot;fileName&quot;: string,
+        &quot;fileSize&quot;: unsigned long,
+        &quot;fileType&quot;: string,
+        &quot;container&quot;: string,
+        &quot;videoStreams&quot;: [
+            {
+                &quot;widthPixels&quot;: unsigned integer,
+                &quot;heightPixels&quot;: unsigned integer,
+                &quot;frameRateFps&quot;: double,
+                &quot;aspectRatio&quot;: double,
+                &quot;codec&quot;: string,
+                &quot;bitrateBps&quot;: unsigned long,
+                &quot;rotation&quot;: string,
+                &quot;vendor&quot;: string
+            }
+        ],
+        &quot;audioStreams&quot;: [
+            {
+                &quot;channelCount&quot;: unsigned integer,
+                &quot;codec&quot;: string,
+                &quot;bitrateBps&quot;: unsigned long,
+                &quot;vendor&quot;: string
+            }
+        ],
+        &quot;durationMs&quot;: unsigned long,
+        &quot;bitrateBps&quot;: unsigned long,
+        &quot;creationTime&quot;: string
+    },
+    &quot;processingDetails&quot;: {
+        &quot;processingStatus&quot;: string,
+        &quot;processingProgress&quot;: {
+            &quot;partsTotal&quot;: unsigned long,
+            &quot;partsProcessed&quot;: unsigned long,
+            &quot;timeLeftMs&quot;: unsigned long
+        },
+        &quot;processingFailureReason&quot;: string,
+        &quot;fileDetailsAvailability&quot;: string,
+        &quot;processingIssuesAvailability&quot;: string,
+        &quot;tagSuggestionsAvailability&quot;: string,
+        &quot;editorSuggestionsAvailability&quot;: string,
+        &quot;thumbnailsAvailability&quot;: string
+    },
+    &quot;suggestions&quot;: {
+        &quot;processingErrors&quot;: [
+            string
+        ],
+        &quot;processingWarnings&quot;: [
+            string
+        ],
+        &quot;processingHints&quot;: [
+            string
+        ],
+        &quot;tagSuggestions&quot;: [
+            {
+                &quot;tag&quot;: string,
+                &quot;categoryRestricts&quot;: [
+                    string
+                ]
+            }
+        ],
+        &quot;editorSuggestions&quot;: [
+            string
+        ]
+    },
+    &quot;liveStreamingDetails&quot;: {
+        &quot;actualStartTime&quot;: datetime,
+        &quot;actualEndTime&quot;: datetime,
+        &quot;scheduledStartTime&quot;: datetime,
+        &quot;scheduledEndTime&quot;: datetime,
+        &quot;concurrentViewers&quot;: unsigned long,
+        &quot;activeLiveChatId&quot;: string
+    },
+    &quot;localizations&quot;: {
+        (key): {
+            &quot;title&quot;: string,
+            &quot;description&quot;: string
+        }
+    }
+}
+</code></pre></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

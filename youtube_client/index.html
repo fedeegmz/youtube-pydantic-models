@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Youtube Client - Youtube Pydantic Models</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="fedeegmz">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">Youtube Pydantic Models</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="./"
+                    class=" active 
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Youtube Client
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#models-collapse" aria-expanded="false">
+                    Models
+                </a>
+                <div class="collapse" id="models-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../models/channel/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Channel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../models/playlist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Playlist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../models/video/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../models/search/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Search
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href=".."
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../models/channel/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/fedeegmz/youtube-pydantic-models"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            fedeegmz/youtube-pydantic-models
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/fedeegmz/youtube-pydantic-models?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/fedeegmz/youtube-pydantic-models?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/fedeegmz/youtube-pydantic-models?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="youtube-client">YouTube Client</h1>
+<p>YouTube's client based on requests.</p>
+<pre><code class="language-python">from youtube_pydantic_models import YoutubeClient
+
+
+client = YoutubeClient(&quot;YOUR_API_KEY&quot;)
+
+channel = client.get_channel(&quot;example_id&quot;, &quot;snippet, statistics&quot;)
+print(channel.snippet.title)
+print(client.get_current_quota())
+</code></pre>
+<h2 id="init-args">Init args</h2>
+<ul>
+<li><strong>api_key</strong> (str): secret YouTube API key.</li>
+<li><strong>qouta_per_day</strong> (int): limit per day of YouTube quota. By default is 10000.</li>
+<li><strong>quotas_table</strong> (Enum): table of quota's cost. By default is <a href="https://github.com/fedeegmz/youtube-pydantic-models/blob/main/youtube_pydantic_models/quotas.py">Quotas class</a></li>
+</ul>
+<h2 id="methods">Methods</h2>
+<ul>
+<li>get_api_service_name(): returns the value of _api_service_name private attribute.</li>
+<li>get_api_version(): returns the value of _api_version private attribute.</li>
+<li>get_quota_per_day(): returns the value of _quota_per_day private attribute.</li>
+<li>set_quota_per_day(): set a value of _quota_per_day private attribute.</li>
+<li>get_current_quota(): returns the value of _current_quota private attribute.</li>
+<li><strong>get_channel(id: str, part: str)</strong>: returns a YoutubeChannelResource or None.</li>
+<li><strong>get_playlist(id: str, part: str)</strong>: returns a YoutubePlaylistResource or None.</li>
+<li><strong>get_video(id: str, part: str)</strong>: returns a YoutubeVideoResource or None.</li>
+<li><strong>search(id: str, part: str, type: str)</strong>: returns a YoutubeSearchResource or None.</li>
+</ul>
+<h3 id="get_channel">get_channel()</h3>
+<p>Search a YouTube channel by id. Select part of the resource.<br />
+Returns a <strong>YoutubeChannelResource</strong> or None.</p>
+<ul>
+<li>
+<p><strong>Parameters (required):</strong>  </p>
+<ul>
+<li><strong>id</strong> (str): channel id to search.</li>
+<li><strong>part</strong> (str): resource's parts separated by comma (,). Available parts: (snippet, contentDetails, statistics, topicDetails, status, brandingSettings, contentOwnerDetails).</li>
+</ul>
+</li>
+<li>
+<p><strong>Errors:</strong>  </p>
+<ul>
+<li><strong>QuotaException</strong>: unavailable YouTube quota.</li>
+</ul>
+</li>
+</ul>
+<h3 id="get_playlist">get_playlist()</h3>
+<p>Search a YouTube playlist by id. Select part of the resource.<br />
+Returns a <strong>YoutubePlaylistResource</strong> or None.</p>
+<ul>
+<li>
+<p><strong>Parameters (required):</strong></p>
+<ul>
+<li><strong>id</strong> (str): playlist id to search.</li>
+<li><strong>part</strong> (str): resource's parts separated by comma (,). Available parts: (snippet, contentDetails, player, status, localizations).</li>
+</ul>
+</li>
+<li>
+<p><strong>Errors:</strong></p>
+<ul>
+<li><strong>QuotaException</strong>: unavailable YouTube quota.</li>
+</ul>
+</li>
+</ul>
+<h3 id="get_video">get_video()</h3>
+<p>Search a YouTube video by id. Select part of the resource.<br />
+Returns a <strong>YoutubeVideoResource</strong> or None.</p>
+<ul>
+<li>
+<p><strong>Parameters (required):</strong></p>
+<ul>
+<li><strong>id</strong> (str): video id to search.</li>
+<li><strong>part</strong> (str): resource's parts separated by comma (,). Available parts: (snippet, contentDetails, statistics, topicDetails, status, player, recordingDetails, localizations, liveStreamingDetails).</li>
+</ul>
+</li>
+<li>
+<p><strong>Errors:</strong></p>
+<ul>
+<li><strong>QuotaException</strong>: unavailable YouTube quota.</li>
+</ul>
+</li>
+</ul>
+<h3 id="search">search()</h3>
+<p>Search a YouTube resource by channel id. Select part of the resource.<br />
+Returns a <strong>YoutubeSearchResource</strong> or None.</p>
+<ul>
+<li>
+<p><strong>Parameters (required):</strong></p>
+<ul>
+<li><strong>channel_id</strong> (str): channel id to search.</li>
+<li><strong>part</strong> (str): resource's parts separated by comma (,). Available parts: (snippet).</li>
+<li><strong>type</strong> (str): resource's type to filter. Available types: (channel, playlist, video).</li>
+</ul>
+</li>
+<li>
+<p><strong>Errors:</strong></p>
+<ul>
+<li><strong>QuotaException</strong>: unavailable YouTube quota.</li>
+</ul>
+</li>
+</ul></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
