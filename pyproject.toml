@@ -36,4 +36,4 @@ include-package-data = true
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["youtube_pydantic_models"]
-exclude = ["tests"]
+exclude = ["tests", "docs"]
