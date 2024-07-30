@@ -29,6 +29,7 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/fedeegmz/youtube-pydantic-models"
 Issues = "https://github.com/fedeegmz/youtube-pydantic-models/issues"
+Documentation = "https://fedeegmz.github.io/youtube-pydantic-models/"
 
 [tool.setuptools]
 include-package-data = true
@@ -36,4 +37,8 @@ include-package-data = true
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["youtube_pydantic_models"]
-exclude = ["tests", "docs"]
+exclude = [
+    "tests",
+    "docs",
+    "samples"
+]
