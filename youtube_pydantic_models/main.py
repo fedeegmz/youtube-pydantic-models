@@ -318,7 +318,7 @@ class YoutubeClient:
         now = datetime.now()
         if self._last_request and self._last_request.date() < now.date():
             self._current_quota = self._quota_per_day
-        print(next_quota)
+        
         next_current_quota = self._current_quota - next_quota
         return self._quota_per_day >= next_current_quota
     
