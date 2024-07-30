@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Channel - Youtube Pydantic Models</title>
+        <title>Get Channel Subscriber Count - Youtube Pydantic Models</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +81,7 @@
             </li>
             <li class="drac-box">
                 <a href="../.."
-                    class=" active 
+                    class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#models-collapse" aria-expanded="false">
                     Models
@@ -90,15 +90,15 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./"
-            class=" active 
+        <a href="../../models/channel/"
+            class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Channel
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../playlist/"
+        <a href="../../models/playlist/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Playlist
@@ -106,7 +106,7 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../video/"
+        <a href="../../models/video/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Video
@@ -114,7 +114,7 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../search/"
+        <a href="../../models/search/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Search
@@ -125,7 +125,7 @@
             </li>
             <li class="drac-box">
                 <a href="../.."
-                    class="
+                    class=" active 
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#samples-collapse" aria-expanded="false">
                     Samples
@@ -134,8 +134,8 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../samples/get_channel_subs/"
-            class="
+        <a href="./"
+            class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Get Channel Subscriber Count
         </a>
@@ -171,14 +171,14 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../../youtube_client/"
+                    <a href="../../models/search/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../playlist/"
-                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a 
+                        class="btn-preview drac-btn drac-text-white--hover disabled" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -250,94 +250,37 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="youtube-channel-resource">Youtube Channel Resource</h1>
-<pre><code class="language-python">from youtube_pydantic_models import YoutubeChannelResource
-</code></pre>
-<p>Represents a <a href="https://developers.google.com/youtube/v3/docs/channels">-&gt; YouTube channel</a>.</p>
-<pre><code class="language-json">{
-    &quot;kind&quot;: &quot;youtube#channel&quot;,
-    &quot;etag&quot;: etag,
-    &quot;id&quot;: string,
-    &quot;snippet&quot;: {
-        &quot;title&quot;: string,
-        &quot;description&quot;: string,
-        &quot;customUrl&quot;: string,
-        &quot;publishedAt&quot;: datetime,
-        &quot;thumbnails&quot;: {
-            (key): {
-            &quot;url&quot;: string,
-            &quot;width&quot;: unsigned integer,
-            &quot;height&quot;: unsigned integer
-        }
-        },
-        &quot;defaultLanguage&quot;: string,
-        &quot;localized&quot;: {
-            &quot;title&quot;: string,
-            &quot;description&quot;: string
-        },
-        &quot;country&quot;: string
-    },
-    &quot;contentDetails&quot;: {
-        &quot;relatedPlaylists&quot;: {
-            &quot;likes&quot;: string,
-            &quot;favorites&quot;: string,
-            &quot;uploads&quot;: string
-        }
-    },
-    &quot;statistics&quot;: {
-        &quot;viewCount&quot;: unsigned long,
-        &quot;subscriberCount&quot;: unsigned long,  // this value is rounded to three significant figures
-        &quot;hiddenSubscriberCount&quot;: boolean,
-        &quot;videoCount&quot;: unsigned long
-    },
-    &quot;topicDetails&quot;: {
-        &quot;topicIds&quot;: [
-            string
-        ],
-        &quot;topicCategories&quot;: [
-            string
-        ]
-    },
-    &quot;status&quot;: {
-        &quot;privacyStatus&quot;: string,
-        &quot;isLinked&quot;: boolean,
-        &quot;longUploadsStatus&quot;: string,
-        &quot;madeForKids&quot;: boolean,
-        &quot;selfDeclaredMadeForKids&quot;: boolean
-    },
-    &quot;brandingSettings&quot;: {
-        &quot;channel&quot;: {
-            &quot;title&quot;: string,
-            &quot;description&quot;: string,
-            &quot;keywords&quot;: string,
-            &quot;trackingAnalyticsAccountId&quot;: string,
-            &quot;unsubscribedTrailer&quot;: string,
-            &quot;defaultLanguage&quot;: string,
-            &quot;country&quot;: string
-        },
-        &quot;watch&quot;: {
-            &quot;textColor&quot;: string,
-            &quot;backgroundColor&quot;: string,
-            &quot;featuredPlaylistId&quot;: string
-        }
-    },
-    &quot;auditDetails&quot;: {
-        &quot;overallGoodStanding&quot;: boolean,
-        &quot;communityGuidelinesGoodStanding&quot;: boolean,
-        &quot;copyrightStrikesGoodStanding&quot;: boolean,
-        &quot;contentIdClaimsGoodStanding&quot;: boolean
-    },
-    &quot;contentOwnerDetails&quot;: {
-        &quot;contentOwner&quot;: string,
-        &quot;timeLinked&quot;: datetime
-    },
-    &quot;localizations&quot;: {
-        (key): {
-            &quot;title&quot;: string,
-            &quot;description&quot;: string
-        }
-    }
-}
+        <p><h1 id="get-channel-subscriber-count">Get Channel Subscriber Count</h1>
+<pre><code class="language-python">from youtube_pydantic_models import (
+    YoutubeClient,
+    YoutubeChannelResource
+)
+
+
+def get_client(api_key: str) -&gt; YoutubeClient:
+    client = YoutubeClient(api_key)
+    return client
+
+def get_channel_subs(
+    client,
+    channel_id: str
+) -&gt; int | None:
+    channel: YoutubeChannelResource | None = client.get_channel(
+        id=channel_id,
+        part=&quot;statistics&quot;
+    )
+
+    if channel:
+        return channel.statistics.subscriber_count
+
+
+### MAIN ###
+print(&quot;Getting data&quot;)
+yt_client = get_client(&quot;MY_SECRET_API_KEY&quot;)
+example_id = &quot;UC_x5XG1OV2P6uZZ5FSM9Ttw&quot;
+subs = get_channel_subs(yt_client, example_id)
+
+print(f&quot;Subscribers of '{example_id}': {subs}&quot;)
 </code></pre></p>
     </article>
 </section>
