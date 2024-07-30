@@ -1,4 +1,6 @@
-# youtube-pydantic-models
+# YouTube Pydantic Models
+
+### youtube-pydantic-models
 
 **Documentation for version:** [v0.2](https://github.com/fedeegmz/youtube-pydantic-models/releases/tag/v0.2.0)  
 

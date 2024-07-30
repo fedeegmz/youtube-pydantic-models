@@ -17,3 +17,5 @@ nav:
     - Playlist: models/playlist.md
     - Video: models/video.md
     - Search: models/search.md
+  - Samples:
+    - Get Channel Subscriber Count: samples/get_channel_subs.md
