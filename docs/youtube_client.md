@@ -27,7 +27,7 @@ print(client.get_current_quota())
 - set_quota_per_day(): set a value of _quota_per_day private attribute.
 - get_current_quota(): returns the value of _current_quota private attribute.
 - **get_channel(id: str, part: str)**: returns a YoutubeChannelResource or None.
-- **get_playlist(id: str, part: str)**: returns a YoutubePlaylistResource or None.
+- **get_playlists(id: str, part: str)**: returns a list of YoutubePlaylistResource or None.
 - **get_video(id: str, part: str)**: returns a YoutubeVideoResource or None.
 - **search(id: str, part: str, type: str)**: returns a YoutubeSearchResource or None.
 
@@ -43,14 +43,19 @@ Returns a **YoutubeChannelResource** or None.
 - **Errors:**  
     - **QuotaException**: unavailable YouTube quota.
 
-### get_playlist()
+### get_playlists()
 
 Search a YouTube playlist by id. Select part of the resource.  
-Returns a **YoutubePlaylistResource** or None.
+Returns a **list of YoutubePlaylistResource** or None.
 
 - **Parameters (required):**
-    - **id** (str): playlist id to search.
     - **part** (str): resource's parts separated by comma (,). Available parts: (snippet, contentDetails, player, status, localizations).
+
+- **Parameters (required):**
+    - **channel_id** (str): channel id to search.
+    - **id** (str): playlist id to search.
+    - **max_results** (int): an integer between 0 and 50.
+    - **page_token** (str): token that represents a page of results.
 
 - **Errors:**
     - **QuotaException**: unavailable YouTube quota.

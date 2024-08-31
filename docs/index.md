@@ -2,7 +2,7 @@
 
 ### youtube-pydantic-models
 
-**Documentation for version:** [v0.2](https://github.com/fedeegmz/youtube-pydantic-models/releases/tag/v0.2.0)  
+**Documentation for version:** [v0.3](https://github.com/fedeegmz/youtube-pydantic-models/releases/tag/v0.3.0)  
 
 A **Python** library that contains the most popular YouTube models based on Pydantic. If you are working with the **YouTube API**, **youtube-pydantic-models** can help you validate, manipulate, and retrieve data.  
 Use the YoutubeClient class to get data about channels, playlists, videos and more.  

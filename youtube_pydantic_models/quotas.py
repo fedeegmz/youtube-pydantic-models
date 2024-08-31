@@ -1,8 +1,10 @@
 from enum import Enum
 
 
+DEFAULT_LIMIT_PER_DAY = 10000
+
 class Quotas(Enum):
-    search = 100
-    list_channel = 1
-    list_playlist = 1
-    list_video = 1
+    SEARCH = 100
+    LIST_CHANNEL = 1
+    LIST_PLAYLIST = 1
+    LIST_VIDEO = 1

@@ -1,4 +1,4 @@
-from tests.youtube_client_for_testing import YoutubeClientForTesting
+from tests.e2e.youtube_client_for_testing import YoutubeClientForTesting
 
 
 class TestGetChannel(YoutubeClientForTesting):

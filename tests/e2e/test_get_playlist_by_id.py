@@ -1,14 +1,14 @@
-from tests.youtube_client_for_testing import YoutubeClientForTesting
+from tests.e2e.youtube_client_for_testing import YoutubeClientForTesting
 
 
 class TestGetPlaylist(YoutubeClientForTesting):
     def test_get_available_playlist(self):
         playlist_id = "PLOU2XLYxmsIL-LSajwT6_VviFWrDChEJX"
-        playlist = self.client.get_playlist(
+        playlist = self.client.get_playlists(
             id=playlist_id,
             part="snippet, contentDetails, player, status, localizations"
         )
-        data = playlist.model_dump(
+        data = playlist[0].model_dump(
             by_alias=True,
             exclude_none=True
         )
@@ -21,7 +21,7 @@ class TestGetPlaylist(YoutubeClientForTesting):
     
     def test_get_unavailable_playlist(self):
         playlist_id = ""
-        playlist = self.client.get_playlist(
+        playlist = self.client.get_playlists(
             id=playlist_id,
             part="snippet, contentDetails, player, status, localizations"
         )
@@ -30,11 +30,11 @@ class TestGetPlaylist(YoutubeClientForTesting):
     
     def test_get_available_playlist_with_available_part(self):
         playlist_id = "PLOU2XLYxmsIL-LSajwT6_VviFWrDChEJX"
-        playlist = self.client.get_playlist(
+        playlist = self.client.get_playlists(
             id=playlist_id,
             part="snippet, contentDetails, player"
         )
-        data = playlist.model_dump(
+        data = playlist[0].model_dump(
             by_alias=True,
             exclude_none=True
         )
@@ -47,7 +47,7 @@ class TestGetPlaylist(YoutubeClientForTesting):
     
     def test_get_available_playlist_with_unvailable_part(self):
         playlist_id = "PLOU2XLYxmsIL-LSajwT6_VviFWrDChEJX"
-        playlist = self.client.get_playlist(
+        playlist = self.client.get_playlists(
             id=playlist_id,
             part="wrong, player, localizations"
         )

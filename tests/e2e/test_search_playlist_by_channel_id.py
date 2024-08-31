@@ -1,4 +1,4 @@
-from tests.youtube_client_for_testing import YoutubeClientForTesting
+from tests.e2e.youtube_client_for_testing import YoutubeClientForTesting
 
 
 class TestSearchPlaylist(YoutubeClientForTesting):
@@ -9,7 +9,7 @@ class TestSearchPlaylist(YoutubeClientForTesting):
             part="snippet",
             type="playlist"
         )
-        data = playlist.model_dump(
+        data = playlist[0].model_dump(
             by_alias=True,
             exclude_none=True
         )
@@ -25,7 +25,7 @@ class TestSearchPlaylist(YoutubeClientForTesting):
             part="snippet",
             type="playlist"
         )
-        data = playlist.model_dump(
+        data = playlist[0].model_dump(
             by_alias=True,
             exclude_none=True
         )
@@ -41,7 +41,7 @@ class TestSearchPlaylist(YoutubeClientForTesting):
             part="snippet",
             type="playlist"
         )
-        data = playlist.model_dump(
+        data = playlist[0].model_dump(
             by_alias=True,
             exclude_none=True
         )

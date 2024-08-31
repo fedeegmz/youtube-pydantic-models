@@ -5,7 +5,10 @@ from youtube_pydantic_models.channel_resource import YoutubeChannelResource
 from youtube_pydantic_models.playlist_resource import YoutubePlaylistResource
 from youtube_pydantic_models.video_resource import YoutubeVideoResource
 from youtube_pydantic_models.search_resource import YoutubeSearchResource
-from youtube_pydantic_models.quotas import Quotas
+from youtube_pydantic_models.quotas import (
+    DEFAULT_LIMIT_PER_DAY,
+    Quotas
+)
 from youtube_pydantic_models.errors import (
     InvalidArgException,
     RequiredArgException,
@@ -14,45 +17,11 @@ from youtube_pydantic_models.errors import (
 
 
 class YoutubeClient:
-    """
-    YouTube's client based on requests.
     
-    Attributes
-    ----------
-    _quota_per_day : int
-        limit per dar of YouTube quota
-    _current_quota : int
-        current available quota
-    _api_version : str
-        version of YouTube API
-    _api_service_name : str
-        name of the service
-    
-    Methods
-    -------
-    get_api_service_name():
-        Returns the value of _api_service_name private attribute.
-    get_api_version():
-        Returns the value of _api_version private attribute.
-    get_quota_per_day():
-        Returns the value of _quota_per_day private attribute.
-    set_quota_per_day():
-        Set a value of _quota_per_day private attribute.
-    get_current_quota():
-        Returns the value of _current_quota private attribute.
-    get_channel(id: str, part: str):
-        Returns a YoutubeChannelResource or None.
-    get_playlist(id: str, part: str):
-        Returns a YoutubePlaylistResource or None.
-    get_video(id: str, part: str):
-        Returns a YoutubeVideoResource or None.
-    search(id: str, part: str, type: str):
-        Returns a YoutubeSearchResource or None.
-    """
     def __init__(
         self,
         api_key: str,
-        quota_per_day: int = 10000,
+        quota_per_day: int = DEFAULT_LIMIT_PER_DAY,
         quotas_table: Enum = Quotas
     ) -> None:
         """
@@ -127,10 +96,6 @@ class YoutubeClient:
         ------
             QuotaException : unavailable YouTube quota
         """
-        request_quota = self._quotas_table.list_channel.value
-        if not self._check_available_quota(request_quota):
-            raise QuotaException()
-        
         params = {
             'id': id,
             'part': part
@@ -138,64 +103,13 @@ class YoutubeClient:
 
         response = self._get_request(
             endpoint = "channels",
-            params = params
+            params = params,
+            quota = self._quotas_table.LIST_CHANNEL.value
         )
 
-        self._sub_quota(request_quota)
-
-        if not response:
-            return None
-        elif response['pageInfo']['totalResults'] > 0:
+        if response and response['pageInfo']['totalResults'] > 0:
             data = response['items'][0]
             return YoutubeChannelResource(**data)
-        return None
-
-    def get_playlist(
-        self,
-        id: str,
-        part: str
-    ) -> YoutubePlaylistResource | None:
-        """
-        Search a YouTube playlist by id. 
-        Select part of the resource.
-
-        Parameters (required)
-        ----------
-            id : str
-                playlist id to search
-            part : str
-                resource's parts separated by comma (,). 
-                Available parts: (snippet, contentDetails, player, status, localizations)
-        
-        Returns
-        -------
-        YoutubePlaylistResource or None
-
-        Errors
-        ------
-            QuotaException : unavailable YouTube quota
-        """
-        request_quota = self._quotas_table.list_playlist.value
-        if not self._check_available_quota(request_quota):
-            raise QuotaException()
-        
-        params = {
-            'id': id,
-            'part': part
-        }
-
-        response = self._get_request(
-            endpoint = "playlists",
-            params = params
-        )
-
-        self._sub_quota(request_quota)
-
-        if not response:
-            return None
-        elif response['pageInfo']['totalResults'] > 0:
-            data = response['items'][0]
-            return YoutubePlaylistResource(**data)
         return None
 
     def get_video(
@@ -224,10 +138,6 @@ class YoutubeClient:
         ------
             QuotaException : unavailable YouTube quota
         """
-        request_quota = self._quotas_table.list_video.value
-        if not self._check_available_quota(request_quota):
-            raise QuotaException()
-        
         params = {
             'id': id,
             'part': part
@@ -235,16 +145,76 @@ class YoutubeClient:
 
         response = self._get_request(
             endpoint = "videos",
-            params = params
+            params = params,
+            quota = self._quotas_table.LIST_VIDEO.value
         )
 
-        self._sub_quota(request_quota)
-
-        if not response:
-            return None
-        elif response['pageInfo']['totalResults'] > 0:
+        if response and response['pageInfo']['totalResults'] > 0:
             data = response['items'][0]
             return YoutubeVideoResource(**data)
+        return None
+    
+    def get_playlists(
+        self,
+        part: str,
+        channel_id: str | None = None,
+        id: str | None = None,
+        max_results: int | None = None,
+        page_token: str | None = None
+    ) -> list[YoutubePlaylistResource] | None:
+        """
+        Search a YouTube playlist by id. 
+        Select part of the resource.
+
+        Parameters (required)
+        ----------
+            part : str
+                resource's parts separated by comma (,). 
+                Available parts: (snippet, contentDetails, player, status, localizations)
+            
+        Parameters (optional)
+        ----------
+            channel_id : str
+                channel id to search
+            id : str
+                playlist id to search
+            max_results : int
+                integer between 0 and 50
+            page_token : str
+                token that represents a page of results
+        
+        Returns
+        -------
+        list of YoutubePlaylistResource or None
+
+        Errors
+        ------
+            QuotaException : unavailable YouTube quota
+        """
+        params = {
+            'channelId': channel_id,
+            'part': part
+        }
+        if id:
+            params.update({'id': id})
+        if max_results:
+            if max_results < 0 or max_results > 50:
+                raise InvalidArgException()
+            params.update({'maxResults': max_results})
+        if page_token:
+            params.update({'pageToken': page_token})
+
+        response = self._get_request(
+            endpoint = "playlists",
+            params = params,
+            quota = self._quotas_table.LIST_PLAYLIST.value
+        )
+
+        if response and response['pageInfo']['totalResults'] > 0:
+            return [
+                YoutubePlaylistResource(**item)
+                for item in response['items']
+            ]
         return None
 
     def search(
@@ -252,7 +222,7 @@ class YoutubeClient:
         channel_id: str,
         part: str,
         type: str
-    ) -> YoutubeSearchResource | None:
+    ) -> list[YoutubeSearchResource] | None:
         """
         Search a YouTube resource by channel id. 
         Select part of the resource.
@@ -270,16 +240,12 @@ class YoutubeClient:
         
         Returns
         -------
-        YoutubeSearchResource or None
+        list of YoutubeSearchResource or None
 
         Errors
         ------
             QuotaException : unavailable YouTube quota
         """
-        request_quota = self._quotas_table.search.value
-        if not self._check_available_quota(request_quota):
-            raise QuotaException()
-        
         params = {
             'channelId': channel_id,
             'part': part,
@@ -288,26 +254,87 @@ class YoutubeClient:
 
         response = self._get_request(
             endpoint = "search",
-            params = params
+            params = params,
+            quota = self._quotas_table.SEARCH.value
         )
 
-        self._sub_quota(request_quota)
-
-        if not response:
-            return None
-        elif response['pageInfo']['totalResults'] > 0:
-            data = response['items'][0]
-            return YoutubeSearchResource(**data)
+        if response and response['pageInfo']['totalResults'] > 0:
+            return [
+                YoutubeSearchResource(**item)
+                for item in response['items']
+            ]
         return None
     
-    def _get_request(self, endpoint: str, params: dict) -> dict | list:
+    def iter_playlists(
+        self,
+        channel_id: str,
+        part: str = "snippet, contentDetails, player, status, localizations",
+        max_results: int = 50,
+    ) -> YoutubePlaylistResource | None:
+        """
+        Search YouTube playlists by channel id. 
+        Select part of the resource.
+
+        Parameters (required)
+        ----------
+            channel_id : str
+                channel id to search
+            
+        Parameters (optional)
+        ----------
+            part : str
+                resource's parts separated by comma (,). 
+                Available parts: (snippet, contentDetails, player, status, localizations)
+            max_results : int
+                integer between 0 and 50. By default is 50
+        
+        Yield
+        -------
+        YoutubePlaylistResource or None
+
+        Errors
+        ------
+            QuotaException : unavailable YouTube quota
+        """
+        request_quota = self._quotas_table.LIST_PLAYLIST.value
+        base_params = {
+            'channelId': channel_id,
+            'part': part,
+            'maxResults': max_results,
+            'pageToken': None
+        }
+
+        while True:
+            response = self._get_request(
+                endpoint = "playlists",
+                params = base_params,
+                quota = request_quota
+            )
+            for item in response['items']:
+                yield YoutubePlaylistResource()
+            
+            if not response.get("nextPageToken"):
+                break
+            base_params['pageToken'] = response['nextPageToken']
+    
+    def _get_request(
+        self,
+        endpoint: str,
+        params: dict,
+        quota: int
+    ) -> dict | list | None:
+        if not self._check_available_quota(quota):
+            raise QuotaException()
+        
         response = requests.get(
             self._api_path + endpoint,
-            params=self._set_key_param(params)
+            params = self._set_key_param(params)
         )
 
         if response.status_code != 200:
             return None
+        
+        self._sub_quota(quota)
         return response.json()
     
     def _set_key_param(self, params: dict) -> dict:
