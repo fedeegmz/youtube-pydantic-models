@@ -1,10 +1,6 @@
 from pydantic import Field
-from youtube_pydantic_models.base_model_config import (
-    get_base_model_config
-)
-from youtube_pydantic_models.base_resource import (
-    YoutubeBaseResource
-)
+from youtube_pydantic_models.base_model_config import get_base_model_config
+from youtube_pydantic_models.base_resource import YoutubeBaseResource
 from youtube_pydantic_models.parts import VideoSnippet
 from youtube_pydantic_models.parts import VideoContentDetails
 from youtube_pydantic_models.parts import VideoStatus
@@ -30,7 +26,7 @@ class YoutubeVideoResource(YoutubeBaseResource):
     player: VideoPlayer | None = Field(default=None)
     topic_details: VideoTopicDetails | None = Field(default=None)
     recording_details: BaseRecordingDetails | None = Field(default=None)
-    file_details : BaseFileDetails | None = Field(default=None)
+    file_details: BaseFileDetails | None = Field(default=None)
     processing_details: BaseProcessingDetails | None = Field(default=None)
     suggestions: BaseSuggestions | None = Field(default=None)
     live_streaming_details: BaseLiveStreamingDetails | None = Field(default=None)

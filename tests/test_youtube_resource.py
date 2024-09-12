@@ -3,22 +3,13 @@ import json
 
 
 class TestYoutubeResource(unittest.TestCase):
-    def init_params(
-        self,
-        data_path: str,
-        model
-    ) -> tuple:
+    def init_params(self, data_path: str, model) -> tuple:
         data = self.get_json_data(data_path)
         if not data:
             raise Exception("example data not found")
 
         json_data = data["items"][0]
-        model_data = model(
-            **json_data
-        ).model_dump(
-            by_alias = True,
-            exclude_none = True
-        )
+        model_data = model(**json_data).model_dump(by_alias=True, exclude_none=True)
 
         return json_data, model_data
 
@@ -28,30 +19,23 @@ class TestYoutubeResource(unittest.TestCase):
         print(json_part)
         print()
         print(model_part)
-        if type(json_part) == dict and type(model_part) == dict:
+        if json_part is dict and model_part is dict:
             assert self.is_included_dict(json_part, model_part)
         else:
             assert json_part == model_part
-    
+
     def get_json_data(self, file_name: str) -> dict | None:
-        with open(
-            f"tests/data/{file_name}",
-            "r"
-        ) as data:
+        with open(f"tests/data/{file_name}", "r") as data:
             return json.loads(data.read())
         return None
 
-    def is_included_dict(
-        self,
-        inner_dict: dict,
-        outer_dict: dict
-    ) -> bool:
+    def is_included_dict(self, inner_dict: dict, outer_dict: dict) -> bool:
         try:
             for key, value in inner_dict.items():
-                if type(value) == dict:
+                if value is dict:
                     self.is_included_dict(value, outer_dict[key])
                 if value != outer_dict[key]:
                     return False
             return True
-        except:
+        except Exception:
             return False
