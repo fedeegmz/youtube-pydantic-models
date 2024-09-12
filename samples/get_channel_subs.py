@@ -1,20 +1,14 @@
-from youtube_pydantic_models import (
-    YoutubeClient,
-    YoutubeChannelResource
-)
+from youtube_pydantic_models import YoutubeClient, YoutubeChannelResource
 
 
 def get_client(api_key: str) -> YoutubeClient:
     client = YoutubeClient(api_key)
     return client
 
-def get_channel_subs(
-    client,
-    channel_id: str
-) -> int | None:
+
+def get_channel_subs(client, channel_id: str) -> int | None:
     channel: YoutubeChannelResource | None = client.get_channel(
-        id=channel_id,
-        part="statistics"
+        id=channel_id, part="statistics"
     )
 
     if channel:
