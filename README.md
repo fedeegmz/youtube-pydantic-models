@@ -157,13 +157,14 @@ The pre-commit hook will run the [Ruff](https://github.com/charliermarsh/ruff) l
 
 ```bash
 #!/bin/sh
-# Ejecutar Ruff linter
 ruff format && ruff check --fix
 status=$?
 if [ $status -ne 0 ]; then
   echo "Error: Ruff linter or formatter found issues. Please fix them before committing."
   exit 1
 fi
+
+echo "Ruff formater and linter passed successfully!"
 ```
 
 Make sure the hook file is executable:
@@ -176,13 +177,14 @@ The pre-push hook will run the Pytest testing suite before pushing code to the r
 
 ```bash
 #!/bin/sh
-# Ejecutar Pytest antes del push
 pytest tests/unit
 status=$?
 if [ $status -ne 0 ]; then
   echo "Error: Pytest found failing tests. Please fix them before pushing."
   exit 1
 fi
+
+echo "Pytest passed successfully!"
 ```
 
 Similarly, ensure the hook file is executable:
