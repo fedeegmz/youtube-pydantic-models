@@ -24,7 +24,7 @@ The YouTube API returns data using camel case, but you can choose to return data
 
 You can install the library using pip:
 
-```bash
+```sh
 pip install youtube-pydantic-models
 ```
 
