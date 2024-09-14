@@ -149,6 +149,53 @@ resource_dict = resource.model_dump(
 
 Contributions are welcome! Please open an issue or submit a pull request on GitHub.
 
+### Recommendations
+
+To ensure code quality and prevent issues, we recommend setting up Git hooks for this project. These hooks will automatically run a linter before each commit and run tests before pushing to the repository.
+
+The pre-commit hook will run the [Ruff](https://github.com/charliermarsh/ruff) linter to check for any code style or formatting issues. Add the following to your `.git/hooks/pre-commit` file:
+
+```bash
+#!/bin/sh
+ruff format && ruff check --fix
+status=$?
+if [ $status -ne 0 ]; then
+  echo "Error: Ruff linter or formatter found issues. Please fix them before committing."
+  exit 1
+fi
+
+echo "Ruff formater and linter passed successfully!"
+```
+
+Make sure the hook file is executable:
+
+```bash
+chmod +x .git/hooks/pre-commit
+```
+
+The pre-push hook will run the Pytest testing suite before pushing code to the repository. Add the following to your .git/hooks/pre-push file:
+
+```bash
+#!/bin/sh
+pytest tests/unit
+status=$?
+if [ $status -ne 0 ]; then
+  echo "Error: Pytest found failing tests. Please fix them before pushing."
+  exit 1
+fi
+
+echo "Pytest passed successfully!"
+```
+
+Similarly, ensure the hook file is executable:
+
+```bash
+chmod +x .git/hooks/pre-push
+```
+
+By following this setup, you'll help maintain high code standards and prevent common errors from reaching the repository.
+
+
 ## License
 
 This project is licensed under the MIT License.
