@@ -1,3 +1,4 @@
+from typing import Generator
 import requests
 from datetime import datetime
 from enum import Enum
@@ -233,7 +234,7 @@ class YoutubeClient:
         self,
         channel_id: str,
         part: str = "snippet, contentDetails, player, status, localizations",
-    ):
+    ) -> Generator[YoutubePlaylistResource, None, None]:
         request_quota = self._quotas_table.LIST_PLAYLIST.value
         base_params = {"channelId": channel_id, "part": part, "pageToken": None}
 
@@ -243,6 +244,32 @@ class YoutubeClient:
             )
             for playlist in response["items"]:
                 yield YoutubePlaylistResource(**playlist)
+
+            if not response.get("nextPageToken"):
+                break
+            base_params["pageToken"] = response["nextPageToken"]
+
+    def iter_videos(
+        self,
+        channel_id: str,
+        part: str = "snippet, contentDetails, player",
+    ) -> Generator[YoutubeVideoResource, None, None]:
+        request_quota = self._quotas_table.SEARCH.value
+        base_params = {
+            "channelId": channel_id,
+            "part": "id",
+            "type": "video",
+            "pageToken": None,
+        }
+
+        while True:
+            response = self._get_request(
+                endpoint="search", params=base_params, quota=request_quota
+            )
+
+            for search_resource in response["items"]:
+                video = self.get_video(search_resource["id"]["videoId"], part)
+                yield video
 
             if not response.get("nextPageToken"):
                 break
