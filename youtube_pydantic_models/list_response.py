@@ -1,7 +1,6 @@
 from pydantic import BaseModel, Field
-from youtube_pydantic_models.base_model_config import (
-    get_base_model_config
-)
+
+from youtube_pydantic_models.base_model_config import get_base_model_config
 from youtube_pydantic_models.parts import BasePageInfo
 
 

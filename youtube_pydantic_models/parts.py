@@ -1,8 +1,8 @@
 from datetime import datetime
+
 from pydantic import BaseModel, Field
-from youtube_pydantic_models.base_model_config import (
-    get_base_model_config
-)
+
+from youtube_pydantic_models.base_model_config import get_base_model_config
 from youtube_pydantic_models.subparts import (
     AudioStream,
     Channel,
@@ -15,7 +15,7 @@ from youtube_pydantic_models.subparts import (
     TagSuggestions,
     Thumbnail,
     VideoStream,
-    Watch
+    Watch,
 )
 
 
@@ -105,7 +105,7 @@ class BaseLiveStreamingDetails(BaseModel):
 
 class BasePageInfo(BaseModel):
     model_config = get_base_model_config()
-    
+
     total_results: int | None = Field(default=None)
     results_per_page: int | None = Field(default=None)
 
@@ -171,7 +171,7 @@ class ChannelSnippet(BaseSnippet):
 
 class PlaylistSnippet(BaseSnippet):
     model_config = get_base_model_config()
-    
+
     channel_id: str | None = Field(default=None)
     channel_title: str | None = Field(default=None)
     default_language: str | None = Field(default=None)

@@ -5,11 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "youtube-pydantic-models"
 version = "0.3.0"
-dependencies = [
-    "pydantic",
-    "requests",
-]
-requires-python = ">= 3.7"
+requires-python = ">=3.7"
 authors = [
     {name = "Federico Gomez", email = "gomez00federico@gmail.com"}
 ]
@@ -24,6 +20,19 @@ classifiers = [
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
+]
+
+dependencies = [
+    "pydantic",
+    "requests",
+]
+[dependency-groups]
+dev = [
+    "black>=23.3.0",
+    "pre-commit>=2.21.0",
+    "pytest>=7.4.4",
+    "python-dotenv>=0.21.1",
+    "ruff>=0.12.9",
 ]
 
 [project.urls]

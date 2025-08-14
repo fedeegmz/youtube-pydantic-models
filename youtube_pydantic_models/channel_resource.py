@@ -1,18 +1,17 @@
 from pydantic import Field
-from youtube_pydantic_models.base_model_config import (
-    get_base_model_config
+
+from youtube_pydantic_models.base_model_config import get_base_model_config
+from youtube_pydantic_models.base_resource import YoutubeBaseResource
+from youtube_pydantic_models.parts import (
+    BaseAuditDetails,
+    BaseBrandingSettings,
+    BaseContentOwnerDetails,
+    BaseTopicDetails,
+    ChannelContentDetails,
+    ChannelSnippet,
+    ChannelStatistics,
+    ChannelStatus,
 )
-from youtube_pydantic_models.base_resource import (
-    YoutubeBaseResource
-)
-from youtube_pydantic_models.parts import ChannelSnippet
-from youtube_pydantic_models.parts import ChannelContentDetails
-from youtube_pydantic_models.parts import ChannelStatistics
-from youtube_pydantic_models.parts import BaseTopicDetails
-from youtube_pydantic_models.parts import ChannelStatus
-from youtube_pydantic_models.parts import BaseBrandingSettings
-from youtube_pydantic_models.parts import BaseAuditDetails
-from youtube_pydantic_models.parts import BaseContentOwnerDetails
 from youtube_pydantic_models.subparts import Localization
 
 

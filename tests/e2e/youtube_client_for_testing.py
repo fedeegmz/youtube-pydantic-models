@@ -1,6 +1,7 @@
 import unittest
-from youtube_pydantic_models.main import YoutubeClient
+
 from tests.config import config
+from youtube_pydantic_models.main import YoutubeClient
 
 
 class YoutubeClientForTesting(unittest.TestCase):
